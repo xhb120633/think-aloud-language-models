@@ -8,5 +8,7 @@
   "each_participant_has_all_19": true,
   "sampling": false,
   "missing_local_dependencies": [],
-  "historical_deployment_recovered": false
+  "historical_deployment_recovered": false,
+  "self_contained_assets": true,
+  "local_asset_references_checked": 14
 }
