@@ -1,0 +1,14 @@
+{
+  "source": "data/behavioral_text_data.csv",
+  "source_sha256": "9997fbef97a69969034a36c366a58a1e7907c65e44a8a08072b388ccb843b82a",
+  "participants_checked": 72,
+  "rows_checked": 1368,
+  "practice_problems": 2,
+  "formal_problems": 17,
+  "each_participant_has_all_19": true,
+  "sampling": false,
+  "missing_local_dependencies": [],
+  "historical_deployment_recovered": false,
+  "self_contained_assets": true,
+  "local_asset_references_checked": 14
+}

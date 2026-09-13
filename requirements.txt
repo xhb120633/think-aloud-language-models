@@ -1,0 +1,12 @@
+# For analysis scripts; the standard-library quick start needs no installation.
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+tqdm
+openpyxl
+psutil
+nltk
+dask

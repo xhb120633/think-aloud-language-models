@@ -1,0 +1,657 @@
+{
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "4a83c0dda7f0de48506419e5b1d7efa1820927a947ee7586a52182de13b4e510"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "eafe66cac726dfda33745f6a38258f794c3e45b16f3f8337ac4b1a833ae0b36e"
+    },
+    {
+      "path": "analyze_behavior_replication.py",
+      "sha256": "82a813ea32b5f5d89458f5372ad0e4fa169c7733bbf189cccd7338618e86483b"
+    },
+    {
+      "path": "analyze_control_experiments.py",
+      "sha256": "b0552a2ff0f9f6813d28b15fc86007ae7010d481c6e0b54b8b850954f985d41f"
+    },
+    {
+      "path": "analyze_cot_embeddings_similarity.py",
+      "sha256": "bbef4aec45ddf446b9dca71fb08d09508bab1365cf4bde2147d59dffb5b8f3b3"
+    },
+    {
+      "path": "analyze_in_context.py",
+      "sha256": "96df6bfb8f48041f2ae43709db51ab35dd6b41f89d768311cc5971bb7b7d24c2"
+    },
+    {
+      "path": "analyze_model_comparison.py",
+      "sha256": "d5b1640b77ae079e113748debdb6a0f200b252f95cf8d9b4176ba8e5c8116250"
+    },
+    {
+      "path": "analyze_superficial_claims.py",
+      "sha256": "6437a924440e07d822ad4c6c4ee77fa9a2b080694e127221dea367312ffe7c2e"
+    },
+    {
+      "path": "analyze_transcription_quality.py",
+      "sha256": "e001cd9aa62a73c12a08641937300223b705b02f8fda858fbf524f6dd009d5a4"
+    },
+    {
+      "path": "data/behavioral_text_data.csv",
+      "sha256": "9997fbef97a69969034a36c366a58a1e7907c65e44a8a08072b388ccb843b82a"
+    },
+    {
+      "path": "data/behavioral_text_data_expanded.csv",
+      "sha256": "b3ba4fdbaa9625b779a9d3a9c4dc756c2283cbcc86800c5f6b3e73db3bc48e08"
+    },
+    {
+      "path": "data/LICENSE.md",
+      "sha256": "835e5ba79b5ba1406006beb7a2c95cde38f6ddf1e1d2e87c803c3fa517d3447c"
+    },
+    {
+      "path": "data/README.md",
+      "sha256": "3ae214bf82f02356f8f80fc5ed1b9b3ffae100683f6b35f709ffa2cd9afa9bab"
+    },
+    {
+      "path": "docs/PROVENANCE.md",
+      "sha256": "d199b59fc9f4224cd6fbca6495461952ffc731df54dd161f45457ae7123704c5"
+    },
+    {
+      "path": "docs/REPRODUCING.md",
+      "sha256": "3745dfd4423c653920c8167207e4c6149afa6e9670d0a9abc217550ed5774276"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "sha256": "8524e7876a066654d6d3562a12a6d4852f28eba04919671c0c03d78826578230"
+    },
+    {
+      "path": "embed_cot_data.py",
+      "sha256": "17cdf2e55c2797814de70d267375559ac9a58e9b4e807037234837211e6d164c"
+    },
+    {
+      "path": "examples/__init__.py",
+      "sha256": "9771169842c633592778139688973ff163dbe737117722e48bb38f1919a8455a"
+    },
+    {
+      "path": "examples/inspect_data.py",
+      "sha256": "32745a2d3b762c0da15999cacaa5d411ca19d7a7886b27d5b6325daa12892ee7"
+    },
+    {
+      "path": "examples/read_data.py",
+      "sha256": "6e9dd40f414135a4706d319daf128eef13a32bbf6635ad14838c73ffa1eed3cf"
+    },
+    {
+      "path": "examples/README.md",
+      "sha256": "9e0910e828a5c55ad2e23d16df56cbb5f15619d1d758ac2b4473980141f766ec"
+    },
+    {
+      "path": "exp1_cognitive_modeling.py",
+      "sha256": "0e8caa1e6afc84e59420a6e5b9882a2ff14228f35f4e252435e0a14541aa05b1"
+    },
+    {
+      "path": "exp1_llm_prediction.py",
+      "sha256": "fe5b91679e13b5599914708131d3edb4b7c53df3c0c24fc34d3ff635ef1c1126"
+    },
+    {
+      "path": "exp1_neural_training.py",
+      "sha256": "19d5a7e39ed8b4db9c06c0d4eda646bf72b3aac108df4c81a76943da43956134"
+    },
+    {
+      "path": "exp2_in_context.py",
+      "sha256": "95522da517931899e5d933a945c351981d64bea7946715aefbc9622b07886048"
+    },
+    {
+      "path": "exp2_in_context_pt.py",
+      "sha256": "70a1f93b54bea1094e86ce487ea6b0bd566c2babdc748e7596b77a1938eae8c1"
+    },
+    {
+      "path": "exp2_in_context_pt_distributed.py",
+      "sha256": "2820aa6df9b3dbd354a5679bb717f98dee9d6242b3e0794a239943c36b67021a"
+    },
+    {
+      "path": "exp_superficial_claims.py",
+      "sha256": "d8fe37e0087c308defedb1585ea899d8fc05f6d8f868e97f1ce526ef40c59c67"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "149b3103a42294ad42c8c1a8734b4e13f51db4b78ea2abc72a8eb6d874e64692"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/index.html",
+      "sha256": "f3dce74102d0c10bbe8b15ff65f606de19642fa7ce7a7f9f148e1477ce44e21c"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/extension-mouse-tracking.js",
+      "sha256": "a3c31076dabbbb704527860ff00af49bbe54bf950273fcdda9a1245e17134c42"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/extension-webgazer.js",
+      "sha256": "2f915110ddeac369fecb069dcca500d6dc9c5867b17c941c2f058035461ec039"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/jspsych.css",
+      "sha256": "baf5b1af98edf9f60b909d08f635c631f1771bd8eb353457e4f56564edb91e13"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/jspsych.js",
+      "sha256": "0fac7d9f95f9cb2f9c72bbb8ac1f0b54cade8e238f6f38a9005bd1f121782520"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-animation.js",
+      "sha256": "e473b4d904e98754f93b2ae18584d2d0e13e0c3a634908af0a8e1488a4a60e39"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-audio-button-response.js",
+      "sha256": "53987b4e161af780b155957df06e7e1ec3af05e116f3b2472166ae5787b9e987"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-audio-keyboard-response.js",
+      "sha256": "6f5fbe7e6d47efc6eef1b22ef81b442e20e3b82e9fa1f6e1af51192d8195cd30"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-audio-slider-response.js",
+      "sha256": "2b772bf2f9f39fde9e8375d87e53ed6c0a1ebce9317aa09eba552c5cff3d816c"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-browser-check.js",
+      "sha256": "f49989af60c7135a688545be632dac006dd025bcb95e8f879bfd41fae4024d6f"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-call-function.js",
+      "sha256": "4a7fed8c79c3a77ff32b93a1c75f30fc309725f0c91cd4dc3dd5a84d146f7d8c"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-canvas-button-response.js",
+      "sha256": "8fc851685959a1c85ba9ea76405fc3a3a3a25b77bff23c5d835d61172caab6a9"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-canvas-keyboard-response.js",
+      "sha256": "0ed835296cb0493ba478501df086fb0c6946227b89b0f41c94636e2ca8eea56b"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-canvas-slider-response.js",
+      "sha256": "5eadab3a672987766af0916b4a3ddd3b63d655fa9832a3477b47ba52e032e30f"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-categorize-animation.js",
+      "sha256": "355b29065549514125fa43bee862b722cee04bff1c404933739e44e6cba58e9b"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-categorize-html.js",
+      "sha256": "3e3c78314165e18a7cad77358243466a2dde5db46276724cf58b767f40ce9da3"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-categorize-image.js",
+      "sha256": "6a78c2df3d28f36a54ae07eade93247968288bea48dbfb37936c1ea21a39828e"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-cloze.js",
+      "sha256": "24be4d0cddd43ddf9834a64e8f354ea893e7eca6754ce10837e4444650e91439"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-external-html.js",
+      "sha256": "fb2d672187ea3a8f22d630fe684e056fe1c9ec99a4fd07a2d9b8b6de4d73ea8c"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-free-sort.js",
+      "sha256": "362cbd97f9cd82077aaf70931b34882d528f785ee7144973f917bbb07025ce46"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-fullscreen.js",
+      "sha256": "367b58dbe3e629e0906532f2da6b108d4e9b2821eaed438166d18033ceacc71b"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-html-audio-response.js",
+      "sha256": "f1ee1940ce1b8f5b68271267b61453c20177ec9865b98f20b1561e05bb110a36"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-html-audiobutton-response.js",
+      "sha256": "6173ed94ebf980050fa03565fbd1371607110de899da876ac5eb395572e149c8"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-html-button-response.js",
+      "sha256": "3f539618b003e5a4468934b9e9ab41b03b5ba8d0bdf736ca65a7f7e73b48429a"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-html-keyboard-response.js",
+      "sha256": "b148de4c6de909833a24b7613714fc3dbecafd160bc80fc9738035c7a03284c0"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-html-slider-response.js",
+      "sha256": "2d0bda0c2c2bbe4acb89233b1795b9d09ebe1aabc7ca5182712e5c11099a81d1"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-iat-html.js",
+      "sha256": "256479b64017d60232aeb6eb2c6c9c2251d0a0cf270690e8b6da84018144d21b"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-iat-image.js",
+      "sha256": "3b07e137020e0b2750437e53ea5ef33f6f13be705786465e2ed800781b7820b0"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-image-button-response.js",
+      "sha256": "d801242dcde79cc1be100319018763a57e87838032f0bd9246aab90a8a1790eb"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-image-keyboard-response.js",
+      "sha256": "787526d1b34203eace5aa90a6b461b907898e5899a4ad46af96bfa2ecbce2990"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-image-slider-response.js",
+      "sha256": "7e1c28b2b05bf04826a5a4a6f78ca5b297af90c9617ce41894f8698c6221bb52"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-initialize-microphone.js",
+      "sha256": "b3371ef3ddc64c1cdd5d32287df2568f40d638d5b12da0b11d7bef930a29f322"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-instructions.js",
+      "sha256": "5b8c97bbcca0a5618fafe0d3a9c2398f7b14ddbb26d6c5dbe1408b96c66b5f74"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-maxdiff.js",
+      "sha256": "a57ae4e68f1b9cfa33613ef09d88f3942f7c77478070e10460309dfb68afdc9b"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-preload.js",
+      "sha256": "5cf2d4a954055c29788f2f840d31efd9418589e416de4683f02e2fa388ce70dd"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-reconstruction.js",
+      "sha256": "6d2a6f31ca1d15de91abdbf08d43441fc17211ea22d364f777c97179da3da40f"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-resize.js",
+      "sha256": "93ea884062da8d6dfc85cb5d11a1aad2e8fe1033cc9f81ae08f100891e578824"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-same-different-html.js",
+      "sha256": "6a3eb09a125ed795cccfc80d98898a9d4fef283c97a6d63b50629720dd5b38fc"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-same-different-image.js",
+      "sha256": "18e79ec102f818070081f25b31ffe25ac453639c3cb76af6f948a91ef541b006"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-serial-reaction-time-mouse.js",
+      "sha256": "7135c17ad0794d0f02eb256e827d6b73c23d32dd7770cc0cbc107eadf02b7b2d"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-serial-reaction-time.js",
+      "sha256": "93a0ed2e16503a5a2af144173af8a285a8c0c9be07841501a953b142f60c6ca7"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-sketchpad.js",
+      "sha256": "f02b166143650ede2f70145c6b029f9441db29daefec104ec28bb614515a71c8"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-survey-html-form.js",
+      "sha256": "8d541d8afeb095729dfc5ae38cdcbe9e51060dfa41e7bbf076583fd93c9a96a3"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-survey-likert.js",
+      "sha256": "23a110ef573f0f1b9bc72c162151eb5dd5474f6aafc5be4954c4007942a0e0b5"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-survey-multi-choice.js",
+      "sha256": "2ffde4026c3c1409b774510a9821e9fa1f866500b1b54d535cc5ad0cbf82e563"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-survey-multi-select.js",
+      "sha256": "bce491261eb255394527fa47cebb8a5a3da8cb497ba16ecbe5a983cb373417d9"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-survey-text.js",
+      "sha256": "2ec470c6fd9599029ff2a45e7bd44303d09dca0317055ec6e6828d44cef15094"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-survey.js",
+      "sha256": "d521ca358fb966eb4bcfe98441efe05615bd6be0766f79076e9c38ae06ec85e9"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-video-button-response.js",
+      "sha256": "b10378ac8af395e1489e646813eaf4646de129ffd510ea8955eabf4ccd5007f5"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-video-keyboard-response.js",
+      "sha256": "b72e6bd2b4c99429345ea893565094d1d78c4f65e16d5f071feea2fa33c5e219"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-video-slider-response.js",
+      "sha256": "6320e704895bb5c3c97bc5c53368f549afbabe212d8e1a8d4ea9690dde2432df"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-virtual-chinrest.js",
+      "sha256": "571589e8cc4bfcf329198f64e3282f6573d8e8328f6eed986767f7b1de7c2b64"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-visual-search-circle.js",
+      "sha256": "aeffec73141d5cf25b1c20f3b18a6a64a479d0793e3c9920481731f7d08dd303"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-webgazer-calibrate.js",
+      "sha256": "65f316d1dbea593986d95cfe1d0ad95fc616bfd1f57759d0b6431ed5b404f9fd"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-webgazer-init-camera.js",
+      "sha256": "e405d2df033a87c119415b2ebc4efa85a966ed8a07132b7f29e4d09b8468ef35"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/jspsych/plugin-webgazer-validate.js",
+      "sha256": "039bbb7debffc97a58db5646cabfa3d77c3d72d85e26fd913bfa63b2048b29b5"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/README.md",
+      "sha256": "7313822af31582c7a23a0a420fe4c79fb75532a920f55edb3ac1c3e44f485640"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/RECONSTRUCTION_CHECK.json",
+      "sha256": "e42e49f18a366d47a0bd31938c97d90c3be46d5ea29144c9bcb388f2706bfa2e"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/stimuli.js",
+      "sha256": "513d8ce102d89d48a24f9ec770c8baa6e51b7beba6e33b935ddd7f88262799a4"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/stimuli.json",
+      "sha256": "97d4081ff9ace9fd6227bdbd0b115c856425a2317969f4cdeb233faf7fd5e430"
+    },
+    {
+      "path": "materials/experiment2_choices13k/experiment_setting.json",
+      "sha256": "0b378e874ab082e42b77503163ede7799acbe2c39fda537ba42bb249008907de"
+    },
+    {
+      "path": "materials/experiment2_choices13k/index.html",
+      "sha256": "b3d8ab04afc4116685c28a0ea5e0b6250fc9419e6433948d9be4061562d9bdc1"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/extension-mouse-tracking.js",
+      "sha256": "a3c31076dabbbb704527860ff00af49bbe54bf950273fcdda9a1245e17134c42"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/extension-webgazer.js",
+      "sha256": "2f915110ddeac369fecb069dcca500d6dc9c5867b17c941c2f058035461ec039"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/jspsych.css",
+      "sha256": "baf5b1af98edf9f60b909d08f635c631f1771bd8eb353457e4f56564edb91e13"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/jspsych.js",
+      "sha256": "0fac7d9f95f9cb2f9c72bbb8ac1f0b54cade8e238f6f38a9005bd1f121782520"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-animation.js",
+      "sha256": "e473b4d904e98754f93b2ae18584d2d0e13e0c3a634908af0a8e1488a4a60e39"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-audio-button-response.js",
+      "sha256": "53987b4e161af780b155957df06e7e1ec3af05e116f3b2472166ae5787b9e987"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-audio-keyboard-response.js",
+      "sha256": "6f5fbe7e6d47efc6eef1b22ef81b442e20e3b82e9fa1f6e1af51192d8195cd30"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-audio-slider-response.js",
+      "sha256": "2b772bf2f9f39fde9e8375d87e53ed6c0a1ebce9317aa09eba552c5cff3d816c"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-browser-check.js",
+      "sha256": "f49989af60c7135a688545be632dac006dd025bcb95e8f879bfd41fae4024d6f"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-call-function.js",
+      "sha256": "4a7fed8c79c3a77ff32b93a1c75f30fc309725f0c91cd4dc3dd5a84d146f7d8c"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-canvas-button-response.js",
+      "sha256": "8fc851685959a1c85ba9ea76405fc3a3a3a25b77bff23c5d835d61172caab6a9"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-canvas-keyboard-response.js",
+      "sha256": "0ed835296cb0493ba478501df086fb0c6946227b89b0f41c94636e2ca8eea56b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-canvas-slider-response.js",
+      "sha256": "5eadab3a672987766af0916b4a3ddd3b63d655fa9832a3477b47ba52e032e30f"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-categorize-animation.js",
+      "sha256": "355b29065549514125fa43bee862b722cee04bff1c404933739e44e6cba58e9b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-categorize-html.js",
+      "sha256": "3e3c78314165e18a7cad77358243466a2dde5db46276724cf58b767f40ce9da3"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-categorize-image.js",
+      "sha256": "6a78c2df3d28f36a54ae07eade93247968288bea48dbfb37936c1ea21a39828e"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-cloze.js",
+      "sha256": "24be4d0cddd43ddf9834a64e8f354ea893e7eca6754ce10837e4444650e91439"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-external-html.js",
+      "sha256": "fb2d672187ea3a8f22d630fe684e056fe1c9ec99a4fd07a2d9b8b6de4d73ea8c"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-free-sort.js",
+      "sha256": "362cbd97f9cd82077aaf70931b34882d528f785ee7144973f917bbb07025ce46"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-fullscreen.js",
+      "sha256": "367b58dbe3e629e0906532f2da6b108d4e9b2821eaed438166d18033ceacc71b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-audio-response.js",
+      "sha256": "f1ee1940ce1b8f5b68271267b61453c20177ec9865b98f20b1561e05bb110a36"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-audiobutton-response.js",
+      "sha256": "6173ed94ebf980050fa03565fbd1371607110de899da876ac5eb395572e149c8"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-button-response.js",
+      "sha256": "3f539618b003e5a4468934b9e9ab41b03b5ba8d0bdf736ca65a7f7e73b48429a"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-keyboard-response.js",
+      "sha256": "b148de4c6de909833a24b7613714fc3dbecafd160bc80fc9738035c7a03284c0"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-slider-response.js",
+      "sha256": "2d0bda0c2c2bbe4acb89233b1795b9d09ebe1aabc7ca5182712e5c11099a81d1"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-iat-html.js",
+      "sha256": "256479b64017d60232aeb6eb2c6c9c2251d0a0cf270690e8b6da84018144d21b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-iat-image.js",
+      "sha256": "3b07e137020e0b2750437e53ea5ef33f6f13be705786465e2ed800781b7820b0"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-image-button-response.js",
+      "sha256": "d801242dcde79cc1be100319018763a57e87838032f0bd9246aab90a8a1790eb"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-image-keyboard-response.js",
+      "sha256": "787526d1b34203eace5aa90a6b461b907898e5899a4ad46af96bfa2ecbce2990"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-image-slider-response.js",
+      "sha256": "7e1c28b2b05bf04826a5a4a6f78ca5b297af90c9617ce41894f8698c6221bb52"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-initialize-microphone.js",
+      "sha256": "b3371ef3ddc64c1cdd5d32287df2568f40d638d5b12da0b11d7bef930a29f322"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-instructions.js",
+      "sha256": "5b8c97bbcca0a5618fafe0d3a9c2398f7b14ddbb26d6c5dbe1408b96c66b5f74"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-maxdiff.js",
+      "sha256": "a57ae4e68f1b9cfa33613ef09d88f3942f7c77478070e10460309dfb68afdc9b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-preload.js",
+      "sha256": "5cf2d4a954055c29788f2f840d31efd9418589e416de4683f02e2fa388ce70dd"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-reconstruction.js",
+      "sha256": "6d2a6f31ca1d15de91abdbf08d43441fc17211ea22d364f777c97179da3da40f"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-resize.js",
+      "sha256": "93ea884062da8d6dfc85cb5d11a1aad2e8fe1033cc9f81ae08f100891e578824"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-same-different-html.js",
+      "sha256": "6a3eb09a125ed795cccfc80d98898a9d4fef283c97a6d63b50629720dd5b38fc"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-same-different-image.js",
+      "sha256": "18e79ec102f818070081f25b31ffe25ac453639c3cb76af6f948a91ef541b006"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-serial-reaction-time-mouse.js",
+      "sha256": "7135c17ad0794d0f02eb256e827d6b73c23d32dd7770cc0cbc107eadf02b7b2d"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-serial-reaction-time.js",
+      "sha256": "93a0ed2e16503a5a2af144173af8a285a8c0c9be07841501a953b142f60c6ca7"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-sketchpad.js",
+      "sha256": "f02b166143650ede2f70145c6b029f9441db29daefec104ec28bb614515a71c8"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-html-form.js",
+      "sha256": "8d541d8afeb095729dfc5ae38cdcbe9e51060dfa41e7bbf076583fd93c9a96a3"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-likert.js",
+      "sha256": "23a110ef573f0f1b9bc72c162151eb5dd5474f6aafc5be4954c4007942a0e0b5"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-multi-choice.js",
+      "sha256": "2ffde4026c3c1409b774510a9821e9fa1f866500b1b54d535cc5ad0cbf82e563"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-multi-select.js",
+      "sha256": "bce491261eb255394527fa47cebb8a5a3da8cb497ba16ecbe5a983cb373417d9"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-text.js",
+      "sha256": "2ec470c6fd9599029ff2a45e7bd44303d09dca0317055ec6e6828d44cef15094"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey.js",
+      "sha256": "d521ca358fb966eb4bcfe98441efe05615bd6be0766f79076e9c38ae06ec85e9"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-video-button-response.js",
+      "sha256": "b10378ac8af395e1489e646813eaf4646de129ffd510ea8955eabf4ccd5007f5"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-video-keyboard-response.js",
+      "sha256": "b72e6bd2b4c99429345ea893565094d1d78c4f65e16d5f071feea2fa33c5e219"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-video-slider-response.js",
+      "sha256": "6320e704895bb5c3c97bc5c53368f549afbabe212d8e1a8d4ea9690dde2432df"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-virtual-chinrest.js",
+      "sha256": "571589e8cc4bfcf329198f64e3282f6573d8e8328f6eed986767f7b1de7c2b64"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-visual-search-circle.js",
+      "sha256": "aeffec73141d5cf25b1c20f3b18a6a64a479d0793e3c9920481731f7d08dd303"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-webgazer-calibrate.js",
+      "sha256": "65f316d1dbea593986d95cfe1d0ad95fc616bfd1f57759d0b6431ed5b404f9fd"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-webgazer-init-camera.js",
+      "sha256": "e405d2df033a87c119415b2ebc4efa85a966ed8a07132b7f29e4d09b8468ef35"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-webgazer-validate.js",
+      "sha256": "039bbb7debffc97a58db5646cabfa3d77c3d72d85e26fd913bfa63b2048b29b5"
+    },
+    {
+      "path": "materials/experiment2_choices13k/README.md",
+      "sha256": "f5836b7f0f796f545df4df43a2d38d4d965e4b46c1cfad63c4d9423f8759cb07"
+    },
+    {
+      "path": "materials/experiment2_choices13k/STIMULUS_CHECK.json",
+      "sha256": "3c72c7656ca6cdf0c9018d413a6995d24930ee0866e44533f547e392142c14b6"
+    },
+    {
+      "path": "materials/README.md",
+      "sha256": "b20cbc23967350cbb06a52fd557df243088c9d8ff7a2be78962e4c403d8fc900"
+    },
+    {
+      "path": "models/cognitive_models.py",
+      "sha256": "74c02abd9be1565e2e46a5ae6ee9d5291230d6a7ca699219d93a8762e24e086b"
+    },
+    {
+      "path": "models/llm_model.py",
+      "sha256": "88b03066a90b45f5135a6e36dec25a253d207867b3cc3f22bf12f8b8f59fd394"
+    },
+    {
+      "path": "models/neural_model.py",
+      "sha256": "4eb47e0e05d07bc62f4931c801e18d19637493da598a1055df6f9e12ac2e2f47"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b2090322a16adc4524ba02c11bcd5ce1731d2118a7e3af941fdd375b614684fa"
+    },
+    {
+      "path": "requirements-models.txt",
+      "sha256": "1e82229ae5147b995d77ffab4edf8f31921140980bb08151a442a45133b1fffe"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "fd1a01f4f8598b5ffb7fbffebc0316cdfee87e2751ba07dc51e44e7a57efc2cc"
+    },
+    {
+      "path": "utils/config.py",
+      "sha256": "1608a2740a8b4e0dfca124e887713a9504323dccd2f64c2d89101fc5bb5c0101"
+    },
+    {
+      "path": "utils/data_processing.py",
+      "sha256": "ca5e77a25f32fac44a6c8763ea6724170459c9f959e0ff82c2304835ca93abc3"
+    },
+    {
+      "path": "utils/metrics.py",
+      "sha256": "4736b3c98067d18a387240cedfe3cd2bfbbcd4d078342680d5d6efd4520974e9"
+    },
+    {
+      "path": "utils/neural_data_loader.py",
+      "sha256": "5070d29a14beebdd25cfa05f5ca5ce90aa192cc306cd1324a9a7c9ec1be19473"
+    },
+    {
+      "path": "utils/prompt_templates.py",
+      "sha256": "1dc64de121de971f8bd44c03986aa0b75dba70bedf4654422644c493fb39230a"
+    },
+    {
+      "path": "utils/prompt_utils.py",
+      "sha256": "fbb780244842cadf0c3418dd803cea90544178bebc3484618792c23063801a53"
+    },
+    {
+      "path": "utils/superficial_action_extraction.py",
+      "sha256": "6a79ee1a27d4c94c8979d47604e19a467146e08143c706693b62ee2d3c0e89ee"
+    },
+    {
+      "path": "utils/visualization.py",
+      "sha256": "5c9c209bbc5774719dd042b12660ca74f737e2a9e74f307b16d027c8cd67e06e"
+    }
+  ]
+}
