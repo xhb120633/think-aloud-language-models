@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<!-- NOTE: memory usage on audio is about 7KB per second, this works out to be approx 25MB per hour -->
+<!-- TODO: 
+  * Is trial order randomized?
+   -->
+<html>
+  <head>
+    <title>Think aloud about risky decisions</title>
+    
+    <meta charset="UTF-8">
+
+    <script src="lib/vendors/jspsych-7.1.2/jspsych.js"></script>
+    <script src="lib/vendors/jspsych-7.1.2/plugin-browser-check.js"></script>
+    <script src="lib/vendors/jspsych-7.1.2/plugin-html-keyboard-response.js"></script>
+    <script src="lib/vendors/jspsych-7.1.2/plugin-html-button-response.js"></script>
+    <script src="lib/vendors/jspsych-7.1.2/plugin-image-keyboard-response.js"></script>
+    <script src="lib/vendors/jspsych-7.1.2/plugin-video-button-response.js"></script>
+    <script src="lib/vendors/jspsych-7.1.2/plugin-survey-multi-choice.js"></script>
+    <!-- <script src="lib/vendors/jspsych-7.1.2/plugin-html-audio-response.js"></script> -->
+    <script src="jspsych/plugin-html-audiobutton-response.js"></script>
+    <script src="lib/vendors/jspsych-7.1.2/plugin-preload.js"></script>
+    
+    <link rel="stylesheet" href="lib/vendors/jspsych-7.1.2/jspsych.css">
+
+    <script src="jspsych/plugin-initialize-microphone.js"></script>
+    <script type="text/javascript" src="lib/jspsych-7-pavlovia-2022.1.1.js"></script>
+    
+    <style>
+    .highlighted {
+        border: 3px solid red;
+        padding: 5px; /* Adjust this to change the size of the square around the choice box */
+    }
+    
+
+      #progress-bar-container {
+        width: 100%;
+        height: 20px;
+        background-color: #ddd;
+      }
+    
+      #progress-bar {
+        height: 100%;
+        background-color: #4CAF50;
+        width: 0%;
+      }
+
+    </style>
+  </head>
+
+  <body></body>
+  
+  <script>
+    // const jsPsych = initJsPsych();
+    
+   
+
+    	/* start the experiment */
+      // jsPsych.init({
+      //       timeline: timeline,
+      //     on_finish: function () {                
+      //               document.body.innerHTML = '<p>Please wait. You will be redirected back to SONA in a few moments.</p>'
+      //               setTimeout(function () { location.href = "https://arizona-psych.sona-systems.com/webstudy_credit.aspx?experiment_id=3118&credit_token=REDACTED&survey_code=" + subject_id }, 5000)
+      //           }
+      // });
+
+    var TEST_FLAG = false;
+    var PAVLOVIA_FLAG = true;
+    var AUDIO_MAX_DURATION_MINUTES = 3;
+    var AUDIO_MAX_DURATION = AUDIO_MAX_DURATION_MINUTES*60*1000;
+    var TEXT_FONT_SIZE = 2;
+    var BUTTON_FONT_SIZE = 2;
+
+    // NOTE: detecting mobile isn't working - for some reason data.mobile is true even when on computer
+    var MOBILE_TEXT_FONT_SIZE = 2;
+    var MOBILE_BUTTON_FONT_SIZE = 2;
+    var MOBILE_FLAG = false;
+
+
+    // generate a random subject ID with 15 characters
+    // var subject_id = jsPsych.randomization.randomID(15);
+
+
+
+    var timeline = [];
+    // var RT_audio; // to store RT on audio trials from trial to trial
+    /* init connection with pavlovia.org */
+    var pavlovia_init = {
+      type: jsPsychPavlovia,
+      command: "init",
+      // Store info received by Pavlovia init into the global variable `pavloviaInfo`
+      setPavloviaInfo: function (info) {
+        console.log(info);
+        pavloviaInfo = info;
+      }
+    };
+
+    /* finish connection with pavlovia.org */
+    var pavlovia_finish = {
+      type: jsPsychPavlovia,
+      command: "finish",
+      participantId: subject_id,
+      // Thomas Pronk; your filter function here
+      dataFilter: function(data) {
+        // Printing the data received from jsPsych.data.get().csv(); a CSV data structure
+        console.log(data);
+        // You can also access the data directly, for instance getting it as JSON
+        // console.log(jsPsych.data.get().json());
+        // Return whatever data you'd like to store
+        return data;
+      },
+      // Thomas Pronk; call this function when we're done with the experiment and data reception has been confirmed by Pavlovia
+      completedCallback: function() {
+        alert('data successfully submitted!');
+      }
+    };
+    
+    // preload
+    var preload = {
+      type: jsPsychPreload,
+      auto_preload: true,
+      message: 'hi',
+      on_start: function(trial) {
+        trial.message = inst_text('Please wait while the experiment is loading ...');
+        MOBILE_FLAG = true;
+      }
+    }
+
+    // check for mobile
+    var browser_check = {
+      type: jsPsychBrowserCheck,
+      on_finish: function(data) {
+        if (data.mobile === true){
+          MOBILE_FLAG = true;
+        }
+      }
+    };
+
+    // var permit = {
+    //     type: jsPsychInitializeMicrophone
+    // };
+
+    function option_box(str, color="red"){
+  		return "<div style='display: inline-block; width: 40%; margin: 1%; border: 2px solid gray; background-color: "+color+"'>"+str+"</div>";
+    }
+    
+    function make_gamble_text(p, v){
+      text = '';
+      for (let i = 0; i < p.length; i++) {
+        if (v[i] > 0){
+          text += "Win " + "$" + v[i] + " with " + p[i] + "% chance<br>";
+        }
+        else{
+          // x = -v[i];
+          text += "Lose " + "$" + (-v[i]) + " with " + p[i] + "% chance<br>";
+        }
+      }
+      return text;
+    }
+
+    function draw_gamble_boxes(p1, v1, p2, v2){
+      textstr = "<div style='text-align:center; position: fixed; left: 50%; transform: translate(-50%, 0); bottom: 60%; width: 80%; justify-content: center;  font-family: Arial, Helvetica, sans-serif; width=500px; height=200px;'>"
+      + option_box(make_gamble_text(p1, v1), 'none') 
+      + option_box(make_gamble_text(p2, v2), 'none')
+      +"</div>";
+      return textstr
+    }
+    
+    function draw_gambles(){
+      p1 = jsPsych.timelineVariable('p1',  true);
+      v1 = jsPsych.timelineVariable('v1',  true);
+      p2 = jsPsych.timelineVariable('p2',  true);
+      v2 = jsPsych.timelineVariable('v2',  true);
+      
+      // textstr = "<div style='text-align:center; position: fixed; left: 50%; transform: translate(-50%, 0); bottom: 60%; width: 80%; justify-content: center;  font-family: Arial, Helvetica, sans-serif; width=500px; height=200px;'>"
+      // + option_box(make_gamble_text(p1, v1), 'none') 
+      // + option_box(make_gamble_text(p2, v2), 'none')
+      // +"</div>";
+      // return textstr
+      return draw_gamble_boxes(p1, v1, p2, v2)
+    }
+
+    function recording(str, color="red"){
+      return "<div style='position: fixed; font-size: 18pt; color: white; padding: 10px; background-color: red; line-height: 1.5; bottom: 0; left: 50%; transform: translate(-50%, 0); width: 80%; max-width: 1250px; border-style: solid; border-color: "+color+"'>"+str+"</div>";
+    }
+
+    var trial_getAudio = {
+        type: jsPsychHtmlAudioButtonResponse,
+        stimulus: '',
+        recording_duration: AUDIO_MAX_DURATION,
+        choices: ['left', 'right'],
+        button_html: 'hi',
+        on_start: function(trial) {     
+               
+          trial.button_html = button_code();
+          practice = jsPsych.timelineVariable('practice',  true);
+          // trial.stimulus = draw_gambles() + recording('RECORDING');
+          trial.stimulus = recording('RECORDING');
+          if (practice){
+            trial.stimulus += guide('Please try to speak your thoughts aloud. When you reach a decision, register your choice by clicking or tapping the option you prefer.');
+          }
+          p1 = jsPsych.timelineVariable('p1',  true);
+          v1 = jsPsych.timelineVariable('v1',  true);
+          p2 = jsPsych.timelineVariable('p2',  true);
+          v2 = jsPsych.timelineVariable('v2',  true);
+          
+          var buttons = document.querySelectorAll('.jspsych-html-button-response-button');
+          buttons.forEach(function(button) {
+          button.classList.remove('highlighted');
+        });
+        
+          trial.choices = [make_gamble_text(p1, v1), make_gamble_text(p2, v2)]
+        },
+        on_finish: function(data){
+          data.trial_name = jsPsych.timelineVariable('name',  true);
+          data.trial_part = 'audio'
+          data.practice   = jsPsych.timelineVariable('practice',  true);
+          data.p1         = jsPsych.timelineVariable('p1',  true);
+          data.v1         = jsPsych.timelineVariable('v1',  true);
+          data.p2         = jsPsych.timelineVariable('p2',  true);
+          data.v2         = jsPsych.timelineVariable('v2',  true);
+          
+          var chosenButton = document.querySelector(`#jspsych-html-button-response-button-${data.button_response}`);
+          if (chosenButton) {
+              chosenButton.classList.add('highlighted');
+          } else {
+              console.error(`No element found with id: jspsych-html-button-response-button-${data.button_response}`);
+          }
+            // RT_audio        = jsPsych.data.get().last(1).values()[0].rt;
+			
+          }
+    };
+
+    var trial_getResponse = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Left option', 'Right option'],
+      button_html: '<button class="jspsych-btn">%choice%</button>',
+      on_start: function(trial) {
+        trial.stimulus = draw_gambles();
+        
+      },
+      on_finish: function(data){
+          
+          var lasttrialdata = jsPsych.data.getLastTrialData();
+
+          data.trial_name = jsPsych.timelineVariable('name',  true);
+          data.trial_part = 'choice'
+          data.practice   = jsPsych.timelineVariable('practice',  true);
+          // data.rt_audio   = lasttrialdata.rt;
+          // data.rt_audio   = RT_audio; //jsPsych.data.get().last(1).values()[0].rt;
+
+          data.p1         = jsPsych.timelineVariable('p1',  true);
+          data.v1         = jsPsych.timelineVariable('v1',  true);
+          data.p2         = jsPsych.timelineVariable('p2',  true);
+          data.v2         = jsPsych.timelineVariable('v2',  true);
+
+			
+        }
+    };
+
+  
+    var practice_expt = {
+      timeline: [trial_getAudio],
+      timeline_variables: [
+        // TODO: Need to update these practice trials
+      {name: 'practice_problem_a', v1: [1000,0], p1: [25, 75], v2: [240], p2: [100], practice: true},
+      {name: 'practice_problem_b', v1: [-500,0], p1: [80, 20], v2: [-400], p2: [100], practice: true},
+      // {name: 'problem1', v1: [2500,2400,0], p1: [33, 66, 1], v2: [2400], p2: [100], practice: true},
+      ],
+    }
+ 
+
+
+    // instructions
+    function guide(str, color="red"){
+      if (MOBILE_FLAG) {
+        return "<div style='position: fixed; font-size: " + MOBILE_TEXT_FONT_SIZE + "vmax; padding: 10px; background-color: white; line-height: 1.5; top: 0; left: 50%; transform: translate(-50%, 0); width: 80%; max-width: 1250px; border-style: solid; border-color: "+color+"'>"+str+"</div>";
+      }
+      else{
+        return "<div style='position: fixed; font-size: " + TEXT_FONT_SIZE + "vmax; padding: 10px; background-color: white; line-height: 1.5; top: 0; left: 50%; transform: translate(-50%, 0); width: 80%; max-width: 1250px; border-style: solid; border-color: "+color+"'>"+str+"</div>";
+      }
+    }
+  
+    function inst_text(str){
+      // return  '<div style="width: 80%; max-width: 1250px; font-size:' + TEXT_FONT_SIZE + 'px;">' + str + '</div>';
+      if (MOBILE_FLAG) {
+        return  '<div style="max-width: 1250px; line-height: 1.3; font-size:' + MOBILE_TEXT_FONT_SIZE + 'vmax;">' + str + '</p>';
+      }
+      else{
+        return  '<div style="max-width: 1250px; line-height: 1.3; font-size:' + TEXT_FONT_SIZE + 'vmax;">' + str + '</p>';
+      }
+    }
+    function button_code(){
+      if (MOBILE_FLAG) {
+        return '<button class="jspsych-btn" style="font-size: ' + MOBILE_BUTTON_FONT_SIZE + 'vmax;">%choice%</button>';
+      }
+      else{
+        return '<button class="jspsych-btn" style="font-size: ' + BUTTON_FONT_SIZE + 'vmax;">%choice%</button>';
+      }
+    }
+    var inst1 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        // if (MOBILE_FLAG) {
+        //   str = 'Welcome to the experiment!<br><br>[click the "Continue" button to continue]';
+        // }
+        // else{
+        str = 'Welcome to the experiment!<br><br>[click the "Continue" button to continue]';
+        // }
+        
+        // trial.stimulus = guide(str);
+        trial.stimulus = inst_text(str);//'<p style="font-size:' + TEXT_FONT_SIZE + 'px;">' + str + '</p>';
+        trial.button_html = button_code();
+      }
+    }
+    var inst2 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = 'In this experiment we will ask you to "think aloud" while you make a series of decisions.';
+        trial.stimulus = inst_text(str);// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+        trial.button_html = button_code();
+      }
+    }
+    var inst3 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = 'By "think aloud" we mean that we want you to speak your thoughts out loud as they come to you while you are making the decision. We will then record what you say using the microphone on your computer.';
+        trial.stimulus = inst_text(str);// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+        trial.button_html = button_code();
+      }
+    }
+    var inst4 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = "On the next page, we will ask permission to use your microphone. You must have a microphone attached to your computer and grant us access to it to proceed in the experiment. If you do not wish for audio to be recorded, please quit the experiment now.";
+        trial.stimulus = inst_text(str);// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+        trial.button_html = button_code();
+      }
+    }
+    var inst5 = {
+        type: jsPsychInitializeMicrophone,
+        device_select_message: 'hi',
+        button_label: 'hi',
+        on_start: function(trial) {
+          str = "Please select the microphone you would like to use. Click 'Use this microphone' when you are done.";
+          trial.device_select_message = inst_text(str);// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+          trial.button_label = inst_text('Use this microphone');
+          trial.button_html = button_code();
+        }
+    };
+    var inst6 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = "Thank you for granting us access to your microphone. We are currently NOT recording audio. Whenever we are recording audio, the word RECORDING will appear in red at the bottom of the window like this ...";
+        // trial.stimulus = guide(str) + recording('RECORDING');// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+        trial.stimulus = inst_text(str) + recording('RECORDING');
+        trial.button_html = button_code();
+      }
+    }
+    var inst7 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = "Because thinking aloud can feel a little weird at first, it helps to watch a video of someone else doing it and to practice it for yourself. On the next page, we will show you a 1 minute video demonstration of someone thinking aloud about the task of refilling a stapler.";
+        trial.stimulus = inst_text(str);// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+        trial.button_html = button_code();
+      }
+    }
+    var inst8 = {
+      type: jsPsychVideoButtonResponse,
+      stimulus: ['Think-Aloud-Demo.mp4'],
+      choices: ['Continue'],
+      button_html: 'hi',
+      response_allowed_while_playing: false,
+      controls: true,
+      on_start: function(trial) {
+        // str = "Because thinking aloud can feel a little weird at first, it helps to watch a video of someone else doing it and to practice it for yourself. On the next page, we will show you a 1 minute video demonstration of someone thinking aloud about the task of refilling a stapler.";
+        // trial.stimulus = inst_text(str);// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+        trial.button_html = button_code();
+      }
+      // on_start: function(trial) {
+      //   str = "INSERT VIDEO DEMONSTRATION";
+      //   trial.stimulus = inst_text(str);// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+      // }
+    }
+    var inst9 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = "Now it's your turn. On the next page we will ask you to think aloud while you solve a simple problem. When you have finished thinking aloud and have an answer, hit the continue button to stop the recording and continue with the instructions. Note that the recording will stop automatically after " + AUDIO_MAX_DURATION_MINUTES + " minutes.";
+        trial.stimulus = inst_text(str);// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+        trial.button_html = button_code();
+      }
+    }
+    var inst10 = {
+      type: jsPsychHtmlAudioButtonResponse,
+      stimulus: '',
+      recording_duration: AUDIO_MAX_DURATION,
+      choices: ['Finish'],
+      button_html: ['<button class="jspsych-btn" id="continue-button">%choice%</button>'],
+      on_start: function(trial) {
+        str = "Please think aloud as you try to figure out how many windows there are in your house or apartment. When you have finished thinking aloud and have an answer, please press continue to stop the recording.";
+        trial.stimulus = inst_text(str) + recording('RECORDING');
+        trial.button_html = button_code();
+      },
+      on_finish: function(data){
+        var continueButton = document.querySelector('#continue-button');
+        if(continueButton) continueButton.style.display = 'none'; // hide the button
+      }
+    }
+    var inst11 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      // button_html: '<button class="jspsych-btn" style="font-size: 25px;">%choice%</button>',
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = "In this experiment, you will not be thinking aloud about windows or staplers. Instead you will make decisions about different gambles like the ones shown below. Click on either of the options to continue.";
+        trial.stimulus = inst_text(str);
+        trial.choices = [make_gamble_text([50,50], [100,0]), make_gamble_text([100], [40])];
+        trial.button_html = button_code();
+        }
+    }
+    var inst12 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      // button_html: '<button class="jspsych-btn" style="font-size: 25px;">%choice%</button>',
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = "In this case the left option gives you a 50-50 chance of $100 or nothing, while the right option gives you $40 for sure. Your job is to think aloud while you decide which of these two options you would prefer. Click on either of the options to continue.";
+        trial.stimulus = inst_text(str);// + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+        trial.choices = [make_gamble_text([50,50], [100,0]), make_gamble_text([100], [40])];
+        trial.button_html = button_code();
+      }
+    }
+    var inst13 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      // button_html: '<button class="jspsych-btn" style="font-size: 25px;">%choice%</button>',
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = "It's important that when you think aloud, you don't worry about trying to explain your choice. Nor should you worry about whether what you are saying makes sense. Instead, simply try to verbalize your current thoughts as you make the decision.";
+        trial.stimulus = inst_text(str);
+        trial.button_html = button_code();
+      }
+    }      
+    // var inst14 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: 'hi',
+    //   on_start: function(trial) {
+    //     str = "When you've finished thinking aloud about each option, hit “Continue” to stop the recording. TODO: ADD CONTINUE BUTTON<br><br>[press any key to continue]";
+    //     trial.stimulus = guide(str) + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+    //   }
+    // }
+    // var inst15 = {
+    //   type: jsPsychHtmlButtonResponse,
+    //   stimulus: 'hi',
+    //   choices: ['Continue'],
+    //   on_start: function(trial) {
+    //     str = "You will then be presented with two buttons with which to register your decision. TODO: ADD CHOICE BUTTONS HERE<br><br>[press any key to continue]";
+    //     trial.stimulus = guide(str) + draw_gamble_boxes([50,50], [100,0], [100], [40]);
+    //   }
+    // }      
+    var inst16 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = 'If all that makes sense, we will run a couple of practice trials so you can get the hang of what to do.';
+        trial.stimulus = inst_text(str);
+        trial.button_html = button_code();
+      }
+    }
+    // var inst3 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: 'hi',
+    //   on_start: function(trial) {
+    //     str = 'Your job is to pick the option you would prefer if you were given these choices for real (for example on a game show).<br><br>[press any key to continue]';
+    //     trial.stimulus = guide(str) + draw_gamble_boxes( [50,50], [100,0], [100], [40]);
+    //   }
+    // }
+    // var inst4 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: 'hi',
+    //   on_start: function(trial) {
+    //     str = 'Before you make your choice, however, we would like you to tell us about your thought process.<br><br>[press any key to continue]';
+    //     trial.stimulus = guide(str) + draw_gamble_boxes([100,0], [50,50], [100], [40]);
+    //   }
+    // }
+    // var inst5 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: 'hi',
+    //   on_start: function(trial) {
+    //     str = 'If you consent to take part in the experiment, every time a choice is presented we will record audio using the microphone on your computer. As you make your choice we would like you to "think aloud" - that is try to verbalize your thoughts about the two options as you have them. <br><br>[press any key to continue]';
+    //     trial.stimulus = guide(str) + draw_gamble_boxes([100,0], [50,50], [100], [40]);
+    //   }
+    // }
+    // var inst6 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: 'hi',
+    //   on_start: function(trial) {
+    //     str = "It's important that when you think aloud, you don't worry about trying to explain your choice. Nor should you worry about whether what you are saying make sense. Instead simply try to verbalize your current thoughts as you make the decision.<br><br>[press any key to continue]";
+    //     trial.stimulus = guide(str) + draw_gamble_boxes([100,0], [50,50], [100], [40]);
+    //   }
+    // }
+    // var inst7 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: 'hi',
+    //   on_start: function(trial) {
+    //     str = "After you've thought aloud and made a decision, you will then press the 'Continue' button to end the audio recording for that trial.<br><br>TODO: NEED TO ADD RECORDING BUTTON HERE<br><br>[press any key to continue]";
+    //     trial.stimulus = guide(str) + draw_gamble_boxes([100,0], [50,50], [100], [40]);
+    //     // TODO: Add continue button in example here
+    //   }
+    // }
+    // var inst8 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: 'hi',
+    //   on_start: function(trial) {
+    //     str = "You will then be presented with two buttons with which to register your decision.<br><br>TODO: ADD CHOICE BUTTONS HERE<br><br>[press any key to continue]";
+    //     trial.stimulus = guide(str) + draw_gamble_boxes([100,0], [50,50], [100], [40]);
+    //     // TODO: Add choice buttons here
+    //   }
+    // }
+    // var inst9 = {
+    //   type: jsPsychHtmlKeyboardResponse,
+    //   stimulus: 'hi',
+    //   on_start: function(trial) {
+    //     str = "If all that makes sense, we will run a couple of practice trials so you can get the hang of what to do. On the next page we will ask permission to access your microphone. If you do not wish us to record audio, please quit the experiment. <br><br>[press any key to continue]";
+    //     trial.stimulus = inst_text(str);
+    //     // TODO: Add choice buttons here
+    //   }
+    // }
+    var inst17 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        str = 'Hopefully that all makes sense. Press "Continue" to begin the experiment!';
+        trial.stimulus = inst_text(str);
+        trial.button_html = button_code();
+      }
+    }
+
+    var instructions = {
+      timeline: [inst1, inst2, inst3, inst4, inst5, inst6, inst7, inst8, inst9, inst10, inst11, inst12, inst13, inst16, practice_expt, inst17],
+    }
+
+    var end_experiment = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'This is the end of the experiment. The data have been uploaded to the server.<br><br>Press "Continue" to be redirected back to SONA.<br><br>',
+      choices: ['Continue'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        trial.button_html = button_code();
+      }
+    }
+
+    var consent = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: 'hi',
+      choices: ['Continue'],
+      on_start: function(trial) {
+        textstr = "<div style='font-size: 18pt; text-align: left; width: 80%; height: 100%; margin: auto; '>" 
+          + "<strong>University of Arizona</strong><br /><br />" 
+          + "<strong>Consent to Participate in Research Study</strong><br /><br />" 
+          + "<strong>Title:</strong> Thinking Aloud While Making Decisions<br /><br />"
+          + "<strong>Principal Investigator:</strong> Robert Wilson<br /><br />" 
+          + "You are being asked to participate in a research study. Your participation in this research study is voluntary and you do not have to participate. This document contains important information about this study and what to expect if you decide to participate.  Please consider the information carefully. Feel free to ask questions before making your decision whether to participate.<br /><br />" 
+          + "In this project we are investigating how people think when they are making decisions. To do this, we will have you make a series of decisions and “Think Aloud” while you make them. By Think Aloud, we mean that we want you to actually speak your mind, give voice to your thoughts as you are having them.<br /><br />"
+          + "To record your thoughts as you speak them aloud, this experiment requires us to record your voice using the microphone on your computer, tablet, or phone. If you do not have a microphone or do not want us to record audio, then please close your browser and end your participation in the study now.<br /><br />" 
+          + "Overall the experiment will take around 30 minutes to 1 hour to complete, depending on how long you take to make each decision.<br /><br />" 
+          + "The risks of taking part in this study are very low. There is no physical risk nor is there any emotional risk because the decisions involved are innocuous. It is possible that during recording of your audio you may reveal information you do not wish to be shared with the experimenters. If this occurs during the study you will be given an opportunity to delete your audio data at the end of the experiment.<br /><br />" 
+          + "If you are a student taking part in this study for credit you will receive course credit upon completion of the study (even if you choose to delete the audio files at the end).<br /><br />" 
+          + "The information that you provide in the study will be handled confidentially. However, there may be circumstances where this information must be released or shared as required by law. The University of Arizona Institutional Review Board may review the research records for monitoring purposes.<br /><br />" 
+          + "For questions, concerns, or complaints about the study you may contact Principal Investigator on the Study Dr Robert Wilson at bob@arizona.edu or Hanbo Xie hanboxie1997@arizona.edu.<br /><br />" 
+          + "For questions about your rights as a participant in this study or to discuss other study-related concerns or complaints with someone who is not part of the research team, you may contact the Human Subjects Protection Program Director at 520-626-8630 or online at https://research.arizona.edu/compliance/human-subjects-protection-program.<br /><br />" 
+          + "By taking part in this online experiment, you are allowing your responses to be used for research purposes.<br><br>" 
+          + "<p style='font-weight: bold; font-size: 28pt; text-align: center;'>By pressing Continue below you are consenting to take part in this experiment.</p></div>";
+        trial.stimulus = textstr;
+        trial.button_html = button_code();
+      }
+    }
+
+
+    var debrief = {
+      type: jsPsychSurveyMultiChoice,
+      questions: [
+          {
+              prompt: "To what extent do you agree with this statement: Thinking aloud adds to the task's difficulty?", 
+              name: 'Q1', 
+              options: ['1. Strongly disagree', 
+                        '2. Disagree', 
+                        '3. Neither agree nor disagree', 
+                        '4. Agree', 
+                        '5. Strongly agree'], 
+              required: true
+          },
+          {
+              prompt: "To what extent do you agree with this statement: What I say can reflect my thoughts to some extent?", 
+              name: 'Q2', 
+              options: ['1. Strongly disagree', 
+                        '2. Disagree', 
+                        '3. Neither agree nor disagree', 
+                        '4. Agree', 
+                        '5. Strongly agree'], 
+              required: true
+          },
+          {
+              prompt: "On a scale from 1 to 5, how much do you speak every day, with 1 being 'very little' and 5 being 'very much'?", 
+              name: 'Q3', 
+              options: ['1. Very little', 
+                        '2. Little', 
+                        '3. Moderate amount', 
+                        '4. A lot', 
+                        '5. Very much'], 
+              required: true
+          },
+          {
+              prompt: "How comfortable do you feel telling your thoughts to others in your daily life?", 
+              name: 'Q4', 
+              options: ['1. Very uncomfortable', 
+                        '2. Uncomfortable', 
+                        '3. Neither comfortable nor uncomfortable', 
+                        '4. Comfortable', 
+                        '5. Very comfortable'], 
+              required: true
+          }
+      ],
+      preamble: "hi",
+      on_start: function(trial) {
+        textstr = "<div style='font-size: 18pt; text-align: left; width: 80%; height: 100%; margin: auto; '>" 
+          + "<b>IMPORTANT: At the end of this debriefing form are four subjective report questions." 
+          + "You must answer these questions correctly in order to gain credit for taking part in this study.<br><br></b><b>" 
+          + "Debriefing for experiment: Thinking Aloud While Making Decisions&nbsp;</b><div><br></div>" 
+          + "<div><b>Contact</b>: Robert Wilson - bob@arizona.edu</div><div><br></div>" 
+          + "<div>In this study we asked you to “Think Aloud” while you made a series of decisions about gambles. Our goal with this experiment is to try to understand the thought processes that arise as you make these decisions.</div>" 
+          + "<div><br></div><div>The Think Aloud method is an old, but underused method in Psychology. The idea is that by asking people to voice their thoughts as they have them, we can gain insight into the cognitive processes underlying a decision. Think Aloud was first used in the 1930s and 40s to study decision making in chess players and the insights gained were quite profound as we learned that expert chess players’ thought processes are remarkably similar to novices. For example, both experts and novices make decisions by evaluating just a small number of possible futures (if I go there then you go there etc …). The difference between experts and novices is in the quality of the moves that they evaluate. Novices tend to consider moves that are unlikely to happen or are simply bad, whereas Experts are much better at considering moves that their opponent may actually make. </div>" 
+          + "<div><br></div><div>In this study we are using the Think Aloud paradigm to study decisions about monetary gambles. These decisions are highly controlled and have been studied for years in the Judgment and Decision Making literature and have led to a series of mathematical models that describe how people might be making these decisions. Unfortunately, from choice data alone, it has proven difficult to tell these models apart. For example, one model assumes that people compute an average “Expected Utility” for each option – roughly corresponding to how good they think that gamble would be on average. On the other hand, another model, assumes that people make their decision using a series of heuristics, for example by comparing the relative probabilities of winning and then comparing the relative size of any possible loss. Both of these models predict choice data remarkably well and there has been a long-running debate over which model is right. The hope is that by recording people’s thoughts as they make these decisions that we will be able to distinguish the two models. For example, if people are using the Expected Utility model, we predict that they would talk about the overall value of each gamble (e.g. “The option on the left looks great, the option on the right not so much”). Conversely, if people are using the heuristic model, they may directly compare different features of the options (e.g. “left has a 50% chance of winning, but right has a higher chance, 75%”). By coding the data for these different kinds of thoughts we will test which of the two models best accounts for the Think Aloud data.</div>" 
+          + "<div><br></div><div>Our hypothesis is that people’s thoughts will fit the Heuristic model better than the Expected Utility model.</div>" 
+        trial.preamble = textstr;
+      },
+      // on_finish: function (trial){
+        // resp = JSON.parse(trial.response);
+        // sID = jsPsych.randomization.randomID(15);
+        // console.log(sID);
+      // }
+    };
+	
+
+
+    var delete_data_check = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: inst_text('The experiment is now complete. Before we upload the data, please confirm that you did not includes sensitive or personal information in your Think Aloud responses.'),
+      choices: ['I did NOT reveal sensitive information.<br>Please upload my data.', 'I DID reveal sensitive information<br>Please DELETE my audio recordings.'],
+      button_html: 'hi',
+      on_start: function(trial) {
+        trial.button_html = button_code();
+      },
+      on_finish: function(data){
+
+        DELETE_FLAG = false;
+        var choice = jsPsych.data.get().last(1).values()[0].response;
+        console.log('Hello')
+        
+        console.log(choice)
+        console.log(choice==1)
+        
+        if (choice == 1){
+          // delete audio data
+          var dat = jsPsych.data.get().filter({trial_type: 'html-audiobutton-response'});
+          x = dat.values();
+          for (let i = 0; i < x.length; i++){
+            x[i].response = 0;
+          }
+          DELETE_FLAG = true;
+        }
+        
+      }
+    }
+
+
+
+   var completedRelevantTrials = 0;
+   var totalTrials = 0;
+   
+   fetch('experiment_setting.json')
+    .then(response => response.json())
+    .then(exp_data => {
+        var sampledData = [];
+        var exp_indices = [...Array(exp_data.length).keys()]; // generate an array of indices
+        for (let i = 0; i < Math.floor(Math.random() * 15) + 60; i++) { // 60-75 random questions
+            var randomIndex = Math.floor(Math.random() * exp_indices.length);
+            sampledData.push(exp_data[exp_indices[randomIndex]]);
+            exp_indices.splice(randomIndex, 1); // remove the used index
+        }
+        var main_expt = {
+            timeline: [trial_getAudio],
+            randomize_order: true,
+            timeline_variables: sampledData,
+        };
+        
+
+        // Now 'main_expt' is ready to be used in your experiment
+        // add all your trial blocks to the timeline
+        timeline.push(pavlovia_init);
+        timeline.push(preload);
+        timeline.push(browser_check);
+        timeline.push(consent);
+        timeline.push(instructions);
+        timeline.push(main_expt);
+        timeline.push(delete_data_check);
+        timeline.push(debrief);
+        timeline.push(pavlovia_finish);
+        timeline.push(end_experiment);
+        
+
+        
+        for (var i = 0; i < timeline.length; i++) {
+        if (timeline[i].timeline_variables) {
+            totalTrials += timeline[i].timeline_variables.length;
+        } 
+        if (timeline[i].question) {
+            totalTrials += timeline[i].question.length;
+        } 
+        if (timeline[i].timeline) {
+            totalTrials += timeline[i].timeline.length;
+        } 
+        else {
+            totalTrials += 1;
+        }
+    }
+
+        // run the study
+        jsPsych.run(timeline);
+    
+        
+    })
+    .catch(error => console.error('Error:', error)); 
+    
+  
+  
+
+  const jsPsych = initJsPsych({
+      timeline: timeline,
+      show_progress_bar: true,
+      auto_update_progress_bar: false,
+      on_trial_start: function() {
+          completedRelevantTrials ++;
+          jsPsych.setProgressBar(completedRelevantTrials / totalTrials);   
+      },
+      
+      on_finish: function(){
+        // location.href="http://u.arizona.edu/~bob/index.html"        
+        document.body.innerHTML = '<p>Please wait. You will be redirected back to SONA in a few moments.</p>'
+        setTimeout(function () { location.href = "https://arizona-psych.sona-systems.com/webstudy_credit.aspx?experiment_id=3237&credit_token=REDACTED&survey_code=" + subject_id }, 5000)
+      }
+    })
+    
+    
+  var subject_id = jsPsych.data.getURLVariable('participant');
+  
+  // record the condition assignment in the jsPsych data
+  jsPsych.data.addProperties({
+    subject: subject_id,
+  })
+
+
+
+    
+
+  </script>
+</html>

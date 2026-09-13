@@ -10,22 +10,6 @@
       "sha256": "eafe66cac726dfda33745f6a38258f794c3e45b16f3f8337ac4b1a833ae0b36e"
     },
     {
-      "path": "CITATION.cff",
-      "sha256": "2603bb78e5e375fc486ef2bbf4c9c6fac465a3d2a7bef92c632aeab95e48741e"
-    },
-    {
-      "path": "LICENSE",
-      "sha256": "90719e59fa8ec5a3b73432433760b99a4fccf6061ba87890ad42ed3a8bca983c"
-    },
-    {
-      "path": "README.md",
-      "sha256": "c0e85eff4ab11f73199575de60a70d84855c80419fea543f823e806e78894cca"
-    },
-    {
-      "path": "SOURCE_MANIFEST.json",
-      "sha256": "3e078fa298ffc18aa0c80059f96594e9c68072f917c2d135d660e312cc2a483a"
-    },
-    {
       "path": "analyze_behavior_replication.py",
       "sha256": "82a813ea32b5f5d89458f5372ad0e4fa169c7733bbf189cccd7338618e86483b"
     },
@@ -54,12 +38,8 @@
       "sha256": "e001cd9aa62a73c12a08641937300223b705b02f8fda858fbf524f6dd009d5a4"
     },
     {
-      "path": "data/LICENSE.md",
-      "sha256": "c6a7570d1719f860af6370eb8a979f34380f2a3b022a776d166c13c4be243c49"
-    },
-    {
-      "path": "data/README.md",
-      "sha256": "3ae214bf82f02356f8f80fc5ed1b9b3ffae100683f6b35f709ffa2cd9afa9bab"
+      "path": "CITATION.cff",
+      "sha256": "8b6ca8f795d6df721c2a7d8141088aab0321fdd2034435cbbeeaf77d88f9561c"
     },
     {
       "path": "data/behavioral_text_data.csv",
@@ -70,12 +50,20 @@
       "sha256": "b3ba4fdbaa9625b779a9d3a9c4dc756c2283cbcc86800c5f6b3e73db3bc48e08"
     },
     {
+      "path": "data/LICENSE.md",
+      "sha256": "c6a7570d1719f860af6370eb8a979f34380f2a3b022a776d166c13c4be243c49"
+    },
+    {
+      "path": "data/README.md",
+      "sha256": "3ae214bf82f02356f8f80fc5ed1b9b3ffae100683f6b35f709ffa2cd9afa9bab"
+    },
+    {
       "path": "docs/PROVENANCE.md",
-      "sha256": "47554085336ea49e6f57cfe9001a5a780bc4918e765d9d00d568ba9947671429"
+      "sha256": "5eb2d79df0775355439321833e3a6ce009b45da4fc0e0b4620cdc63780c4c95c"
     },
     {
       "path": "docs/REPRODUCING.md",
-      "sha256": "6abcf19d37c7cf8208f86c17ced8f626aa82ec83637c5e717509aa589f7331fd"
+      "sha256": "3745dfd4423c653920c8167207e4c6149afa6e9670d0a9abc217550ed5774276"
     },
     {
       "path": "docs/VALIDATION.md",
@@ -84,10 +72,6 @@
     {
       "path": "embed_cot_data.py",
       "sha256": "17cdf2e55c2797814de70d267375559ac9a58e9b4e807037234837211e6d164c"
-    },
-    {
-      "path": "examples/README.md",
-      "sha256": "9e0910e828a5c55ad2e23d16df56cbb5f15619d1d758ac2b4473980141f766ec"
     },
     {
       "path": "examples/__init__.py",
@@ -100,6 +84,10 @@
     {
       "path": "examples/read_data.py",
       "sha256": "6e9dd40f414135a4706d319daf128eef13a32bbf6635ad14838c73ffa1eed3cf"
+    },
+    {
+      "path": "examples/README.md",
+      "sha256": "9e0910e828a5c55ad2e23d16df56cbb5f15619d1d758ac2b4473980141f766ec"
     },
     {
       "path": "exp1_cognitive_modeling.py",
@@ -130,6 +118,278 @@
       "sha256": "d8fe37e0087c308defedb1585ea899d8fc05f6d8f868e97f1ce526ef40c59c67"
     },
     {
+      "path": "LICENSE",
+      "sha256": "90719e59fa8ec5a3b73432433760b99a4fccf6061ba87890ad42ed3a8bca983c"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/index.html",
+      "sha256": "3256d9b382d3cc3611d728832b02bb7880eaf423d6ef61200f3ec35976adc858"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/README.md",
+      "sha256": "c0d7c4af9d78ba73f21ce0c13a2759e27856fccd331432947d49fbc74b700974"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/RECONSTRUCTION_CHECK.json",
+      "sha256": "d44fdf5899fee14c66d403f6d6471a95dcff84b42423dc58de25aa98d8a00779"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/stimuli.js",
+      "sha256": "513d8ce102d89d48a24f9ec770c8baa6e51b7beba6e33b935ddd7f88262799a4"
+    },
+    {
+      "path": "materials/experiment1_prospect_theory/stimuli.json",
+      "sha256": "97d4081ff9ace9fd6227bdbd0b115c856425a2317969f4cdeb233faf7fd5e430"
+    },
+    {
+      "path": "materials/experiment2_choices13k/experiment_setting.json",
+      "sha256": "0b378e874ab082e42b77503163ede7799acbe2c39fda537ba42bb249008907de"
+    },
+    {
+      "path": "materials/experiment2_choices13k/index.html",
+      "sha256": "88fda0815d93ec371e3fb2e22a8e76efc7b65e96edfc9320537c731e6922f63b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/extension-mouse-tracking.js",
+      "sha256": "a3c31076dabbbb704527860ff00af49bbe54bf950273fcdda9a1245e17134c42"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/extension-webgazer.js",
+      "sha256": "2f915110ddeac369fecb069dcca500d6dc9c5867b17c941c2f058035461ec039"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/jspsych.css",
+      "sha256": "baf5b1af98edf9f60b909d08f635c631f1771bd8eb353457e4f56564edb91e13"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/jspsych.js",
+      "sha256": "0fac7d9f95f9cb2f9c72bbb8ac1f0b54cade8e238f6f38a9005bd1f121782520"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-animation.js",
+      "sha256": "e473b4d904e98754f93b2ae18584d2d0e13e0c3a634908af0a8e1488a4a60e39"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-audio-button-response.js",
+      "sha256": "53987b4e161af780b155957df06e7e1ec3af05e116f3b2472166ae5787b9e987"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-audio-keyboard-response.js",
+      "sha256": "6f5fbe7e6d47efc6eef1b22ef81b442e20e3b82e9fa1f6e1af51192d8195cd30"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-audio-slider-response.js",
+      "sha256": "2b772bf2f9f39fde9e8375d87e53ed6c0a1ebce9317aa09eba552c5cff3d816c"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-browser-check.js",
+      "sha256": "f49989af60c7135a688545be632dac006dd025bcb95e8f879bfd41fae4024d6f"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-call-function.js",
+      "sha256": "4a7fed8c79c3a77ff32b93a1c75f30fc309725f0c91cd4dc3dd5a84d146f7d8c"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-canvas-button-response.js",
+      "sha256": "8fc851685959a1c85ba9ea76405fc3a3a3a25b77bff23c5d835d61172caab6a9"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-canvas-keyboard-response.js",
+      "sha256": "0ed835296cb0493ba478501df086fb0c6946227b89b0f41c94636e2ca8eea56b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-canvas-slider-response.js",
+      "sha256": "5eadab3a672987766af0916b4a3ddd3b63d655fa9832a3477b47ba52e032e30f"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-categorize-animation.js",
+      "sha256": "355b29065549514125fa43bee862b722cee04bff1c404933739e44e6cba58e9b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-categorize-html.js",
+      "sha256": "3e3c78314165e18a7cad77358243466a2dde5db46276724cf58b767f40ce9da3"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-categorize-image.js",
+      "sha256": "6a78c2df3d28f36a54ae07eade93247968288bea48dbfb37936c1ea21a39828e"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-cloze.js",
+      "sha256": "24be4d0cddd43ddf9834a64e8f354ea893e7eca6754ce10837e4444650e91439"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-external-html.js",
+      "sha256": "fb2d672187ea3a8f22d630fe684e056fe1c9ec99a4fd07a2d9b8b6de4d73ea8c"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-free-sort.js",
+      "sha256": "362cbd97f9cd82077aaf70931b34882d528f785ee7144973f917bbb07025ce46"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-fullscreen.js",
+      "sha256": "367b58dbe3e629e0906532f2da6b108d4e9b2821eaed438166d18033ceacc71b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-audio-response.js",
+      "sha256": "f1ee1940ce1b8f5b68271267b61453c20177ec9865b98f20b1561e05bb110a36"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-audiobutton-response.js",
+      "sha256": "6173ed94ebf980050fa03565fbd1371607110de899da876ac5eb395572e149c8"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-button-response.js",
+      "sha256": "3f539618b003e5a4468934b9e9ab41b03b5ba8d0bdf736ca65a7f7e73b48429a"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-keyboard-response.js",
+      "sha256": "b148de4c6de909833a24b7613714fc3dbecafd160bc80fc9738035c7a03284c0"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-html-slider-response.js",
+      "sha256": "2d0bda0c2c2bbe4acb89233b1795b9d09ebe1aabc7ca5182712e5c11099a81d1"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-iat-html.js",
+      "sha256": "256479b64017d60232aeb6eb2c6c9c2251d0a0cf270690e8b6da84018144d21b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-iat-image.js",
+      "sha256": "3b07e137020e0b2750437e53ea5ef33f6f13be705786465e2ed800781b7820b0"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-image-button-response.js",
+      "sha256": "d801242dcde79cc1be100319018763a57e87838032f0bd9246aab90a8a1790eb"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-image-keyboard-response.js",
+      "sha256": "787526d1b34203eace5aa90a6b461b907898e5899a4ad46af96bfa2ecbce2990"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-image-slider-response.js",
+      "sha256": "7e1c28b2b05bf04826a5a4a6f78ca5b297af90c9617ce41894f8698c6221bb52"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-initialize-microphone.js",
+      "sha256": "b3371ef3ddc64c1cdd5d32287df2568f40d638d5b12da0b11d7bef930a29f322"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-instructions.js",
+      "sha256": "5b8c97bbcca0a5618fafe0d3a9c2398f7b14ddbb26d6c5dbe1408b96c66b5f74"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-maxdiff.js",
+      "sha256": "a57ae4e68f1b9cfa33613ef09d88f3942f7c77478070e10460309dfb68afdc9b"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-preload.js",
+      "sha256": "5cf2d4a954055c29788f2f840d31efd9418589e416de4683f02e2fa388ce70dd"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-reconstruction.js",
+      "sha256": "6d2a6f31ca1d15de91abdbf08d43441fc17211ea22d364f777c97179da3da40f"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-resize.js",
+      "sha256": "93ea884062da8d6dfc85cb5d11a1aad2e8fe1033cc9f81ae08f100891e578824"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-same-different-html.js",
+      "sha256": "6a3eb09a125ed795cccfc80d98898a9d4fef283c97a6d63b50629720dd5b38fc"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-same-different-image.js",
+      "sha256": "18e79ec102f818070081f25b31ffe25ac453639c3cb76af6f948a91ef541b006"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-serial-reaction-time-mouse.js",
+      "sha256": "7135c17ad0794d0f02eb256e827d6b73c23d32dd7770cc0cbc107eadf02b7b2d"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-serial-reaction-time.js",
+      "sha256": "93a0ed2e16503a5a2af144173af8a285a8c0c9be07841501a953b142f60c6ca7"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-sketchpad.js",
+      "sha256": "f02b166143650ede2f70145c6b029f9441db29daefec104ec28bb614515a71c8"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-html-form.js",
+      "sha256": "8d541d8afeb095729dfc5ae38cdcbe9e51060dfa41e7bbf076583fd93c9a96a3"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-likert.js",
+      "sha256": "23a110ef573f0f1b9bc72c162151eb5dd5474f6aafc5be4954c4007942a0e0b5"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-multi-choice.js",
+      "sha256": "2ffde4026c3c1409b774510a9821e9fa1f866500b1b54d535cc5ad0cbf82e563"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-multi-select.js",
+      "sha256": "bce491261eb255394527fa47cebb8a5a3da8cb497ba16ecbe5a983cb373417d9"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey-text.js",
+      "sha256": "2ec470c6fd9599029ff2a45e7bd44303d09dca0317055ec6e6828d44cef15094"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-survey.js",
+      "sha256": "d521ca358fb966eb4bcfe98441efe05615bd6be0766f79076e9c38ae06ec85e9"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-video-button-response.js",
+      "sha256": "b10378ac8af395e1489e646813eaf4646de129ffd510ea8955eabf4ccd5007f5"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-video-keyboard-response.js",
+      "sha256": "b72e6bd2b4c99429345ea893565094d1d78c4f65e16d5f071feea2fa33c5e219"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-video-slider-response.js",
+      "sha256": "6320e704895bb5c3c97bc5c53368f549afbabe212d8e1a8d4ea9690dde2432df"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-virtual-chinrest.js",
+      "sha256": "571589e8cc4bfcf329198f64e3282f6573d8e8328f6eed986767f7b1de7c2b64"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-visual-search-circle.js",
+      "sha256": "aeffec73141d5cf25b1c20f3b18a6a64a479d0793e3c9920481731f7d08dd303"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-webgazer-calibrate.js",
+      "sha256": "65f316d1dbea593986d95cfe1d0ad95fc616bfd1f57759d0b6431ed5b404f9fd"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-webgazer-init-camera.js",
+      "sha256": "e405d2df033a87c119415b2ebc4efa85a966ed8a07132b7f29e4d09b8468ef35"
+    },
+    {
+      "path": "materials/experiment2_choices13k/jspsych/plugin-webgazer-validate.js",
+      "sha256": "039bbb7debffc97a58db5646cabfa3d77c3d72d85e26fd913bfa63b2048b29b5"
+    },
+    {
+      "path": "materials/experiment2_choices13k/README.md",
+      "sha256": "69debf90b1ee2dcd5f2cb67f4146c83d1938562c5a288915ba1d0d5ec50ca3b4"
+    },
+    {
+      "path": "materials/experiment2_choices13k/SOURCE_MANIFEST.json",
+      "sha256": "a066da5a19c35b4989c487a8c09dc5e362bfcf4c7d85038ed1551edb7c5b4210"
+    },
+    {
+      "path": "materials/experiment2_choices13k/STIMULUS_CHECK.json",
+      "sha256": "3c72c7656ca6cdf0c9018d413a6995d24930ee0866e44533f547e392142c14b6"
+    },
+    {
+      "path": "materials/experiment2_choices13k/Think-Aloud-Demo.mp4",
+      "sha256": "34deae555a4f892640c828319395494f55dc36a419cdfa09fbcb2bf4cedd72f3"
+    },
+    {
+      "path": "materials/README.md",
+      "sha256": "2a15dfddd1c0be283bf11748b4e10e59090575374a63becf404dd6f16bcf3f3e"
+    },
+    {
       "path": "models/cognitive_models.py",
       "sha256": "74c02abd9be1565e2e46a5ae6ee9d5291230d6a7ca699219d93a8762e24e086b"
     },
@@ -142,12 +402,20 @@
       "sha256": "4eb47e0e05d07bc62f4931c801e18d19637493da598a1055df6f9e12ac2e2f47"
     },
     {
+      "path": "README.md",
+      "sha256": "2fb26d88d1e7a13a2f0bff0d7318532e8a4b374b00a02b2d3371c3afd6a63806"
+    },
+    {
       "path": "requirements-models.txt",
       "sha256": "1e82229ae5147b995d77ffab4edf8f31921140980bb08151a442a45133b1fffe"
     },
     {
       "path": "requirements.txt",
       "sha256": "fd1a01f4f8598b5ffb7fbffebc0316cdfee87e2751ba07dc51e44e7a57efc2cc"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "3e078fa298ffc18aa0c80059f96594e9c68072f917c2d135d660e312cc2a483a"
     },
     {
       "path": "utils/config.py",

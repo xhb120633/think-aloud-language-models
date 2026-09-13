@@ -1,6 +1,6 @@
 # Rethinking Think-Aloud in the Age of Language Models
 
-**Open data and research code for _Rethinking Think-Aloud in the Age of Language Models: Verbally reported thoughts are predictive of behavior_.**
+**Open data, study materials, and research code for _Rethinking Think-Aloud in the Age of Language Models: Verbally reported thoughts are predictive of behavior_.**
 
 Hanbo Xie, Hua-Dong Xiong, and Robert C. Wilson
 
@@ -40,6 +40,10 @@ print(trials[0]["p1"])        # parsed list of probabilities
 ```
 
 A [pandas example](examples/README.md) is also available.
+
+## Study materials
+
+[Collection materials](materials/README.md) include the recovered Experiment 2 jsPsych framework, instructions, consent/debriefing, stimulus definitions, and instructional video. Experiment 1 has a clearly labeled reconstruction from the public data: **two practice problems and all 17 formal problems, without sampling**. The archive and reconstruction document their different provenance and deployment dependencies. Participant recordings are not included.
 
 ## Find the research code
 

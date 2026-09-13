@@ -1,0 +1,355 @@
+{
+  "source": "Author-provided Human_experiment/Legacy folder",
+  "files": [
+    {
+      "file": "experiment_setting.json",
+      "source_sha256": "0b378e874ab082e42b77503163ede7799acbe2c39fda537ba42bb249008907de",
+      "release_sha256": "0b378e874ab082e42b77503163ede7799acbe2c39fda537ba42bb249008907de",
+      "changes": []
+    },
+    {
+      "file": "index.html",
+      "source_sha256": "b9e6c90499075579d5d8c21086f91e2de1293f8e4f6694e43c2845f569bd2969",
+      "release_sha256": "88fda0815d93ec371e3fb2e22a8e76efc7b65e96edfc9320537c731e6922f63b",
+      "changes": [
+        "Redacted two SONA credit tokens, including one in commented code. No study logic or instructions changed."
+      ]
+    },
+    {
+      "file": "Think-Aloud-Demo.mp4",
+      "source_sha256": "34deae555a4f892640c828319395494f55dc36a419cdfa09fbcb2bf4cedd72f3",
+      "release_sha256": "34deae555a4f892640c828319395494f55dc36a419cdfa09fbcb2bf4cedd72f3",
+      "changes": []
+    },
+    {
+      "file": "jspsych/extension-mouse-tracking.js",
+      "source_sha256": "a3c31076dabbbb704527860ff00af49bbe54bf950273fcdda9a1245e17134c42",
+      "release_sha256": "a3c31076dabbbb704527860ff00af49bbe54bf950273fcdda9a1245e17134c42",
+      "changes": []
+    },
+    {
+      "file": "jspsych/extension-webgazer.js",
+      "source_sha256": "2f915110ddeac369fecb069dcca500d6dc9c5867b17c941c2f058035461ec039",
+      "release_sha256": "2f915110ddeac369fecb069dcca500d6dc9c5867b17c941c2f058035461ec039",
+      "changes": []
+    },
+    {
+      "file": "jspsych/jspsych.css",
+      "source_sha256": "baf5b1af98edf9f60b909d08f635c631f1771bd8eb353457e4f56564edb91e13",
+      "release_sha256": "baf5b1af98edf9f60b909d08f635c631f1771bd8eb353457e4f56564edb91e13",
+      "changes": []
+    },
+    {
+      "file": "jspsych/jspsych.js",
+      "source_sha256": "0fac7d9f95f9cb2f9c72bbb8ac1f0b54cade8e238f6f38a9005bd1f121782520",
+      "release_sha256": "0fac7d9f95f9cb2f9c72bbb8ac1f0b54cade8e238f6f38a9005bd1f121782520",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-animation.js",
+      "source_sha256": "e473b4d904e98754f93b2ae18584d2d0e13e0c3a634908af0a8e1488a4a60e39",
+      "release_sha256": "e473b4d904e98754f93b2ae18584d2d0e13e0c3a634908af0a8e1488a4a60e39",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-audio-button-response.js",
+      "source_sha256": "53987b4e161af780b155957df06e7e1ec3af05e116f3b2472166ae5787b9e987",
+      "release_sha256": "53987b4e161af780b155957df06e7e1ec3af05e116f3b2472166ae5787b9e987",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-audio-keyboard-response.js",
+      "source_sha256": "6f5fbe7e6d47efc6eef1b22ef81b442e20e3b82e9fa1f6e1af51192d8195cd30",
+      "release_sha256": "6f5fbe7e6d47efc6eef1b22ef81b442e20e3b82e9fa1f6e1af51192d8195cd30",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-audio-slider-response.js",
+      "source_sha256": "2b772bf2f9f39fde9e8375d87e53ed6c0a1ebce9317aa09eba552c5cff3d816c",
+      "release_sha256": "2b772bf2f9f39fde9e8375d87e53ed6c0a1ebce9317aa09eba552c5cff3d816c",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-browser-check.js",
+      "source_sha256": "f49989af60c7135a688545be632dac006dd025bcb95e8f879bfd41fae4024d6f",
+      "release_sha256": "f49989af60c7135a688545be632dac006dd025bcb95e8f879bfd41fae4024d6f",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-call-function.js",
+      "source_sha256": "4a7fed8c79c3a77ff32b93a1c75f30fc309725f0c91cd4dc3dd5a84d146f7d8c",
+      "release_sha256": "4a7fed8c79c3a77ff32b93a1c75f30fc309725f0c91cd4dc3dd5a84d146f7d8c",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-canvas-button-response.js",
+      "source_sha256": "8fc851685959a1c85ba9ea76405fc3a3a3a25b77bff23c5d835d61172caab6a9",
+      "release_sha256": "8fc851685959a1c85ba9ea76405fc3a3a3a25b77bff23c5d835d61172caab6a9",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-canvas-keyboard-response.js",
+      "source_sha256": "0ed835296cb0493ba478501df086fb0c6946227b89b0f41c94636e2ca8eea56b",
+      "release_sha256": "0ed835296cb0493ba478501df086fb0c6946227b89b0f41c94636e2ca8eea56b",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-canvas-slider-response.js",
+      "source_sha256": "5eadab3a672987766af0916b4a3ddd3b63d655fa9832a3477b47ba52e032e30f",
+      "release_sha256": "5eadab3a672987766af0916b4a3ddd3b63d655fa9832a3477b47ba52e032e30f",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-categorize-animation.js",
+      "source_sha256": "355b29065549514125fa43bee862b722cee04bff1c404933739e44e6cba58e9b",
+      "release_sha256": "355b29065549514125fa43bee862b722cee04bff1c404933739e44e6cba58e9b",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-categorize-html.js",
+      "source_sha256": "3e3c78314165e18a7cad77358243466a2dde5db46276724cf58b767f40ce9da3",
+      "release_sha256": "3e3c78314165e18a7cad77358243466a2dde5db46276724cf58b767f40ce9da3",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-categorize-image.js",
+      "source_sha256": "6a78c2df3d28f36a54ae07eade93247968288bea48dbfb37936c1ea21a39828e",
+      "release_sha256": "6a78c2df3d28f36a54ae07eade93247968288bea48dbfb37936c1ea21a39828e",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-cloze.js",
+      "source_sha256": "24be4d0cddd43ddf9834a64e8f354ea893e7eca6754ce10837e4444650e91439",
+      "release_sha256": "24be4d0cddd43ddf9834a64e8f354ea893e7eca6754ce10837e4444650e91439",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-external-html.js",
+      "source_sha256": "fb2d672187ea3a8f22d630fe684e056fe1c9ec99a4fd07a2d9b8b6de4d73ea8c",
+      "release_sha256": "fb2d672187ea3a8f22d630fe684e056fe1c9ec99a4fd07a2d9b8b6de4d73ea8c",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-free-sort.js",
+      "source_sha256": "362cbd97f9cd82077aaf70931b34882d528f785ee7144973f917bbb07025ce46",
+      "release_sha256": "362cbd97f9cd82077aaf70931b34882d528f785ee7144973f917bbb07025ce46",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-fullscreen.js",
+      "source_sha256": "367b58dbe3e629e0906532f2da6b108d4e9b2821eaed438166d18033ceacc71b",
+      "release_sha256": "367b58dbe3e629e0906532f2da6b108d4e9b2821eaed438166d18033ceacc71b",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-html-audio-response.js",
+      "source_sha256": "f1ee1940ce1b8f5b68271267b61453c20177ec9865b98f20b1561e05bb110a36",
+      "release_sha256": "f1ee1940ce1b8f5b68271267b61453c20177ec9865b98f20b1561e05bb110a36",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-html-audiobutton-response.js",
+      "source_sha256": "6173ed94ebf980050fa03565fbd1371607110de899da876ac5eb395572e149c8",
+      "release_sha256": "6173ed94ebf980050fa03565fbd1371607110de899da876ac5eb395572e149c8",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-html-button-response.js",
+      "source_sha256": "3f539618b003e5a4468934b9e9ab41b03b5ba8d0bdf736ca65a7f7e73b48429a",
+      "release_sha256": "3f539618b003e5a4468934b9e9ab41b03b5ba8d0bdf736ca65a7f7e73b48429a",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-html-keyboard-response.js",
+      "source_sha256": "b148de4c6de909833a24b7613714fc3dbecafd160bc80fc9738035c7a03284c0",
+      "release_sha256": "b148de4c6de909833a24b7613714fc3dbecafd160bc80fc9738035c7a03284c0",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-html-slider-response.js",
+      "source_sha256": "2d0bda0c2c2bbe4acb89233b1795b9d09ebe1aabc7ca5182712e5c11099a81d1",
+      "release_sha256": "2d0bda0c2c2bbe4acb89233b1795b9d09ebe1aabc7ca5182712e5c11099a81d1",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-iat-html.js",
+      "source_sha256": "256479b64017d60232aeb6eb2c6c9c2251d0a0cf270690e8b6da84018144d21b",
+      "release_sha256": "256479b64017d60232aeb6eb2c6c9c2251d0a0cf270690e8b6da84018144d21b",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-iat-image.js",
+      "source_sha256": "3b07e137020e0b2750437e53ea5ef33f6f13be705786465e2ed800781b7820b0",
+      "release_sha256": "3b07e137020e0b2750437e53ea5ef33f6f13be705786465e2ed800781b7820b0",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-image-button-response.js",
+      "source_sha256": "d801242dcde79cc1be100319018763a57e87838032f0bd9246aab90a8a1790eb",
+      "release_sha256": "d801242dcde79cc1be100319018763a57e87838032f0bd9246aab90a8a1790eb",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-image-keyboard-response.js",
+      "source_sha256": "787526d1b34203eace5aa90a6b461b907898e5899a4ad46af96bfa2ecbce2990",
+      "release_sha256": "787526d1b34203eace5aa90a6b461b907898e5899a4ad46af96bfa2ecbce2990",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-image-slider-response.js",
+      "source_sha256": "7e1c28b2b05bf04826a5a4a6f78ca5b297af90c9617ce41894f8698c6221bb52",
+      "release_sha256": "7e1c28b2b05bf04826a5a4a6f78ca5b297af90c9617ce41894f8698c6221bb52",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-initialize-microphone.js",
+      "source_sha256": "b3371ef3ddc64c1cdd5d32287df2568f40d638d5b12da0b11d7bef930a29f322",
+      "release_sha256": "b3371ef3ddc64c1cdd5d32287df2568f40d638d5b12da0b11d7bef930a29f322",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-instructions.js",
+      "source_sha256": "5b8c97bbcca0a5618fafe0d3a9c2398f7b14ddbb26d6c5dbe1408b96c66b5f74",
+      "release_sha256": "5b8c97bbcca0a5618fafe0d3a9c2398f7b14ddbb26d6c5dbe1408b96c66b5f74",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-maxdiff.js",
+      "source_sha256": "a57ae4e68f1b9cfa33613ef09d88f3942f7c77478070e10460309dfb68afdc9b",
+      "release_sha256": "a57ae4e68f1b9cfa33613ef09d88f3942f7c77478070e10460309dfb68afdc9b",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-preload.js",
+      "source_sha256": "5cf2d4a954055c29788f2f840d31efd9418589e416de4683f02e2fa388ce70dd",
+      "release_sha256": "5cf2d4a954055c29788f2f840d31efd9418589e416de4683f02e2fa388ce70dd",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-reconstruction.js",
+      "source_sha256": "6d2a6f31ca1d15de91abdbf08d43441fc17211ea22d364f777c97179da3da40f",
+      "release_sha256": "6d2a6f31ca1d15de91abdbf08d43441fc17211ea22d364f777c97179da3da40f",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-resize.js",
+      "source_sha256": "93ea884062da8d6dfc85cb5d11a1aad2e8fe1033cc9f81ae08f100891e578824",
+      "release_sha256": "93ea884062da8d6dfc85cb5d11a1aad2e8fe1033cc9f81ae08f100891e578824",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-same-different-html.js",
+      "source_sha256": "6a3eb09a125ed795cccfc80d98898a9d4fef283c97a6d63b50629720dd5b38fc",
+      "release_sha256": "6a3eb09a125ed795cccfc80d98898a9d4fef283c97a6d63b50629720dd5b38fc",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-same-different-image.js",
+      "source_sha256": "18e79ec102f818070081f25b31ffe25ac453639c3cb76af6f948a91ef541b006",
+      "release_sha256": "18e79ec102f818070081f25b31ffe25ac453639c3cb76af6f948a91ef541b006",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-serial-reaction-time-mouse.js",
+      "source_sha256": "7135c17ad0794d0f02eb256e827d6b73c23d32dd7770cc0cbc107eadf02b7b2d",
+      "release_sha256": "7135c17ad0794d0f02eb256e827d6b73c23d32dd7770cc0cbc107eadf02b7b2d",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-serial-reaction-time.js",
+      "source_sha256": "93a0ed2e16503a5a2af144173af8a285a8c0c9be07841501a953b142f60c6ca7",
+      "release_sha256": "93a0ed2e16503a5a2af144173af8a285a8c0c9be07841501a953b142f60c6ca7",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-sketchpad.js",
+      "source_sha256": "f02b166143650ede2f70145c6b029f9441db29daefec104ec28bb614515a71c8",
+      "release_sha256": "f02b166143650ede2f70145c6b029f9441db29daefec104ec28bb614515a71c8",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-survey-html-form.js",
+      "source_sha256": "8d541d8afeb095729dfc5ae38cdcbe9e51060dfa41e7bbf076583fd93c9a96a3",
+      "release_sha256": "8d541d8afeb095729dfc5ae38cdcbe9e51060dfa41e7bbf076583fd93c9a96a3",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-survey-likert.js",
+      "source_sha256": "23a110ef573f0f1b9bc72c162151eb5dd5474f6aafc5be4954c4007942a0e0b5",
+      "release_sha256": "23a110ef573f0f1b9bc72c162151eb5dd5474f6aafc5be4954c4007942a0e0b5",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-survey-multi-choice.js",
+      "source_sha256": "2ffde4026c3c1409b774510a9821e9fa1f866500b1b54d535cc5ad0cbf82e563",
+      "release_sha256": "2ffde4026c3c1409b774510a9821e9fa1f866500b1b54d535cc5ad0cbf82e563",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-survey-multi-select.js",
+      "source_sha256": "bce491261eb255394527fa47cebb8a5a3da8cb497ba16ecbe5a983cb373417d9",
+      "release_sha256": "bce491261eb255394527fa47cebb8a5a3da8cb497ba16ecbe5a983cb373417d9",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-survey-text.js",
+      "source_sha256": "2ec470c6fd9599029ff2a45e7bd44303d09dca0317055ec6e6828d44cef15094",
+      "release_sha256": "2ec470c6fd9599029ff2a45e7bd44303d09dca0317055ec6e6828d44cef15094",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-survey.js",
+      "source_sha256": "d521ca358fb966eb4bcfe98441efe05615bd6be0766f79076e9c38ae06ec85e9",
+      "release_sha256": "d521ca358fb966eb4bcfe98441efe05615bd6be0766f79076e9c38ae06ec85e9",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-video-button-response.js",
+      "source_sha256": "b10378ac8af395e1489e646813eaf4646de129ffd510ea8955eabf4ccd5007f5",
+      "release_sha256": "b10378ac8af395e1489e646813eaf4646de129ffd510ea8955eabf4ccd5007f5",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-video-keyboard-response.js",
+      "source_sha256": "b72e6bd2b4c99429345ea893565094d1d78c4f65e16d5f071feea2fa33c5e219",
+      "release_sha256": "b72e6bd2b4c99429345ea893565094d1d78c4f65e16d5f071feea2fa33c5e219",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-video-slider-response.js",
+      "source_sha256": "6320e704895bb5c3c97bc5c53368f549afbabe212d8e1a8d4ea9690dde2432df",
+      "release_sha256": "6320e704895bb5c3c97bc5c53368f549afbabe212d8e1a8d4ea9690dde2432df",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-virtual-chinrest.js",
+      "source_sha256": "571589e8cc4bfcf329198f64e3282f6573d8e8328f6eed986767f7b1de7c2b64",
+      "release_sha256": "571589e8cc4bfcf329198f64e3282f6573d8e8328f6eed986767f7b1de7c2b64",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-visual-search-circle.js",
+      "source_sha256": "aeffec73141d5cf25b1c20f3b18a6a64a479d0793e3c9920481731f7d08dd303",
+      "release_sha256": "aeffec73141d5cf25b1c20f3b18a6a64a479d0793e3c9920481731f7d08dd303",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-webgazer-calibrate.js",
+      "source_sha256": "65f316d1dbea593986d95cfe1d0ad95fc616bfd1f57759d0b6431ed5b404f9fd",
+      "release_sha256": "65f316d1dbea593986d95cfe1d0ad95fc616bfd1f57759d0b6431ed5b404f9fd",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-webgazer-init-camera.js",
+      "source_sha256": "e405d2df033a87c119415b2ebc4efa85a966ed8a07132b7f29e4d09b8468ef35",
+      "release_sha256": "e405d2df033a87c119415b2ebc4efa85a966ed8a07132b7f29e4d09b8468ef35",
+      "changes": []
+    },
+    {
+      "file": "jspsych/plugin-webgazer-validate.js",
+      "source_sha256": "039bbb7debffc97a58db5646cabfa3d77c3d72d85e26fd913bfa63b2048b29b5",
+      "release_sha256": "039bbb7debffc97a58db5646cabfa3d77c3d72d85e26fd913bfa63b2048b29b5",
+      "changes": []
+    }
+  ]
+}
