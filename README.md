@@ -12,8 +12,8 @@ No account, API key, GPU, or special data format is needed. The two UTF-8 CSV fi
 
 | Dataset | Participants | Trials | Download |
 |---|---:|---:|---|
-| Experiment 1 (`small`) | 72 | 1,368 | [CSV, 0.43 MB](https://raw.githubusercontent.com/xhb120633/think-aloud-language-models/main/data/behavioral_text_data.csv) |
-| Experiment 2 (`large`) | 641 | 44,308 | [CSV, 9.65 MB](https://raw.githubusercontent.com/xhb120633/think-aloud-language-models/main/data/behavioral_text_data_expanded.csv) |
+| Experiment 1: Prospect Theory Design (`small`) | 72 | 1,368 | [CSV, 0.43 MB](https://raw.githubusercontent.com/xhb120633/think-aloud-language-models/main/data/behavioral_text_data.csv) |
+| Experiment 2: Choices13k (`large`) | 641 | 44,308 | [CSV, 9.65 MB](https://raw.githubusercontent.com/xhb120633/think-aloud-language-models/main/data/behavioral_text_data_expanded.csv) |
 
 Use **Save link as** to download an individual CSV, or [download the entire repository as a ZIP](https://github.com/xhb120633/think-aloud-language-models/archive/refs/heads/main.zip).
 

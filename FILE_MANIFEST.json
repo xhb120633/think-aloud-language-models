@@ -11,7 +11,7 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "b65a68b37737f6a1818a5e6185038809e3fcb023f2df9f682e947c595920cc43"
+      "sha256": "2603bb78e5e375fc486ef2bbf4c9c6fac465a3d2a7bef92c632aeab95e48741e"
     },
     {
       "path": "LICENSE",
@@ -19,7 +19,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "31aa54f9c054b0862b13c314b6d499899dc3893f395c1d91b9bb081353bea4a7"
+      "sha256": "c0e85eff4ab11f73199575de60a70d84855c80419fea543f823e806e78894cca"
     },
     {
       "path": "SOURCE_MANIFEST.json",
@@ -59,7 +59,7 @@
     },
     {
       "path": "data/README.md",
-      "sha256": "feb4f927bbe79e23b954734e2d41c160f4c991d9a3e9db1f3ecede3ccf0ca73b"
+      "sha256": "3ae214bf82f02356f8f80fc5ed1b9b3ffae100683f6b35f709ffa2cd9afa9bab"
     },
     {
       "path": "data/behavioral_text_data.csv",
@@ -71,7 +71,7 @@
     },
     {
       "path": "docs/PROVENANCE.md",
-      "sha256": "3a564f59c814e54f042906c97878ed55fa3c4be6e1757a935879dd74d9c13893"
+      "sha256": "47554085336ea49e6f57cfe9001a5a780bc4918e765d9d00d568ba9947671429"
     },
     {
       "path": "docs/REPRODUCING.md",

@@ -10,6 +10,6 @@ authors:
   - family-names: Wilson
     given-names: Robert C.
 repository-code: "https://github.com/xhb120633/think-aloud-language-models"
-version: 1.0.1
+version: 1.0.2
 license: MIT
 date-released: 2026-09-13

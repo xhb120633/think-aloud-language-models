@@ -22,10 +22,12 @@ Each row is one risky-choice trial. The files are UTF-8 CSVs with a header row, 
 
 ## Files and counts
 
-| File | Code label | Rows | Participant keys | Nonblank transcript fields |
-|---|---|---:|---:|---:|
-| [behavioral_text_data.csv](behavioral_text_data.csv) | `small` | 1,368 | 72 | 1,323 |
-| [behavioral_text_data_expanded.csv](behavioral_text_data_expanded.csv) | `large` | 44,308 | 641 | 36,967 |
+The experiment numbers and design names below correspond to the manuscript. `small` and `large` are the labels used in the code.
+
+| Experiment / design | File | Code label | Rows | Participant keys | Nonblank transcript fields |
+|---|---|---|---:|---:|---:|
+| Experiment 1: Prospect Theory Design | [behavioral_text_data.csv](behavioral_text_data.csv) | `small` | 1,368 | 72 | 1,323 |
+| Experiment 2: Choices13k | [behavioral_text_data_expanded.csv](behavioral_text_data_expanded.csv) | `large` | 44,308 | 641 | 36,967 |
 
 Participant keys should be interpreted within experiment. The research loader encodes them again; those encoded IDs should not be joined to the raw IDs without a mapping. The supplied example retains the source keys and an experiment label.
 
