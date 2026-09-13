@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying manuscript and the repository version used."
+message: "If you use these data, materials, or code, please cite our PsyArXiv preprint listed in preferred-citation."
 title: "Rethinking Think-Aloud in the Age of Language Models: Data and Code"
 type: software
 authors:
@@ -13,3 +13,17 @@ repository-code: "https://github.com/xhb120633/think-aloud-language-models"
 version: 1.1.0
 license: MIT
 date-released: 2026-09-13
+preferred-citation:
+  type: article
+  title: "Rethinking Think-Aloud in the Age of Language Models"
+  authors:
+    - family-names: Xie
+      given-names: Hanbo
+    - family-names: Xiong
+      given-names: Hua-Dong
+    - family-names: Wilson
+      given-names: Robert C.
+  year: 2025
+  journal: PsyArXiv
+  doi: "10.31234/osf.io/6ta3z_v2"
+  url: "https://doi.org/10.31234/osf.io/6ta3z_v2"

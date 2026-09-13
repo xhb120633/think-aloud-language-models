@@ -39,7 +39,7 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "8b6ca8f795d6df721c2a7d8141088aab0321fdd2034435cbbeeaf77d88f9561c"
+      "sha256": "f3476a81af2fa4f58a6c5dfd01dc31c85f8bd5ee956c04fd419d87d14f046dbc"
     },
     {
       "path": "data/behavioral_text_data.csv",
@@ -627,7 +627,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "2fb26d88d1e7a13a2f0bff0d7318532e8a4b374b00a02b2d3371c3afd6a63806"
+      "sha256": "eb3e51b6ae0dc50ede8c1daceb8ede4ca6e92016c99c855c92f90fb5c03ef52e"
     },
     {
       "path": "requirements-models.txt",

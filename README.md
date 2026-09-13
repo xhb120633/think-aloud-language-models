@@ -67,6 +67,10 @@ This is a **core-data and source-code release**. Saved predictions, embeddings, 
 
 Code and documentation: [MIT](LICENSE). The two CSV datasets: [CC BY 4.0](data/LICENSE.md).
 
-Please cite the accompanying manuscript and the repository version you used. [CITATION.cff](CITATION.cff) provides authorship and a repository citation; no publication DOI is assigned here. [Versioned releases](https://github.com/xhb120633/think-aloud-language-models/releases) provide downloadable snapshots.
+If you use these data, materials, or code, please cite our preprint:
+
+> Xie, H., Xiong, H.-D., & Wilson, R. C. (2025). *Rethinking Think-Aloud in the Age of Language Models*. PsyArXiv. https://doi.org/10.31234/osf.io/6ta3z_v2
+
+[CITATION.cff](CITATION.cff) sets this article as the preferred citation for GitHub's **Cite this repository** feature. You can additionally identify the [repository release](https://github.com/xhb120633/think-aloud-language-models/releases) used for reproducibility.
 
 [Release provenance](docs/PROVENANCE.md) and [SHA-256 checksums](FILE_MANIFEST.json) document the files. Questions or reproducibility reports can be submitted through [GitHub Issues](https://github.com/xhb120633/think-aloud-language-models/issues).
