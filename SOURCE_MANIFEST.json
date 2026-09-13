@@ -1,0 +1,144 @@
+{
+  "files": [
+    {
+      "path": "exp1_llm_prediction.py",
+      "sha256": "fe5b91679e13b5599914708131d3edb4b7c53df3c0c24fc34d3ff635ef1c1126",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "exp1_neural_training.py",
+      "sha256": "19d5a7e39ed8b4db9c06c0d4eda646bf72b3aac108df4c81a76943da43956134",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "exp2_in_context.py",
+      "sha256": "95522da517931899e5d933a945c351981d64bea7946715aefbc9622b07886048",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "exp2_in_context_pt.py",
+      "sha256": "70a1f93b54bea1094e86ce487ea6b0bd566c2babdc748e7596b77a1938eae8c1",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "exp2_in_context_pt_distributed.py",
+      "sha256": "2820aa6df9b3dbd354a5679bb717f98dee9d6242b3e0794a239943c36b67021a",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "exp_superficial_claims.py",
+      "sha256": "d8fe37e0087c308defedb1585ea899d8fc05f6d8f868e97f1ce526ef40c59c67",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "embed_cot_data.py",
+      "sha256": "17cdf2e55c2797814de70d267375559ac9a58e9b4e807037234837211e6d164c",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "analyze_behavior_replication.py",
+      "sha256": "82a813ea32b5f5d89458f5372ad0e4fa169c7733bbf189cccd7338618e86483b",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "analyze_model_comparison.py",
+      "sha256": "d5b1640b77ae079e113748debdb6a0f200b252f95cf8d9b4176ba8e5c8116250",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "analyze_control_experiments.py",
+      "sha256": "b0552a2ff0f9f6813d28b15fc86007ae7010d481c6e0b54b8b850954f985d41f",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "analyze_in_context.py",
+      "sha256": "96df6bfb8f48041f2ae43709db51ab35dd6b41f89d768311cc5971bb7b7d24c2",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "analyze_cot_embeddings_similarity.py",
+      "sha256": "bbef4aec45ddf446b9dca71fb08d09508bab1365cf4bde2147d59dffb5b8f3b3",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "analyze_superficial_claims.py",
+      "sha256": "6437a924440e07d822ad4c6c4ee77fa9a2b080694e127221dea367312ffe7c2e",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "analyze_transcription_quality.py",
+      "sha256": "e001cd9aa62a73c12a08641937300223b705b02f8fda858fbf524f6dd009d5a4",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "exp1_cognitive_modeling.py",
+      "sha256": "0e8caa1e6afc84e59420a6e5b9882a2ff14228f35f4e252435e0a14541aa05b1",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "data/behavioral_text_data.csv",
+      "sha256": "9997fbef97a69969034a36c366a58a1e7907c65e44a8a08072b388ccb843b82a",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "data/behavioral_text_data_expanded.csv",
+      "sha256": "b3ba4fdbaa9625b779a9d3a9c4dc756c2283cbcc86800c5f6b3e73db3bc48e08",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "models/cognitive_models.py",
+      "sha256": "74c02abd9be1565e2e46a5ae6ee9d5291230d6a7ca699219d93a8762e24e086b",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "models/llm_model.py",
+      "sha256": "88b03066a90b45f5135a6e36dec25a253d207867b3cc3f22bf12f8b8f59fd394",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "models/neural_model.py",
+      "sha256": "4eb47e0e05d07bc62f4931c801e18d19637493da598a1055df6f9e12ac2e2f47",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "utils/config.py",
+      "sha256": "1608a2740a8b4e0dfca124e887713a9504323dccd2f64c2d89101fc5bb5c0101",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "utils/data_processing.py",
+      "sha256": "ca5e77a25f32fac44a6c8763ea6724170459c9f959e0ff82c2304835ca93abc3",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "utils/metrics.py",
+      "sha256": "4736b3c98067d18a387240cedfe3cd2bfbbcd4d078342680d5d6efd4520974e9",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "utils/neural_data_loader.py",
+      "sha256": "5070d29a14beebdd25cfa05f5ca5ce90aa192cc306cd1324a9a7c9ec1be19473",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "utils/prompt_templates.py",
+      "sha256": "1dc64de121de971f8bd44c03986aa0b75dba70bedf4654422644c493fb39230a",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "utils/prompt_utils.py",
+      "sha256": "fbb780244842cadf0c3418dd803cea90544178bebc3484618792c23063801a53",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "utils/superficial_action_extraction.py",
+      "sha256": "6a79ee1a27d4c94c8979d47604e19a467146e08143c706693b62ee2d3c0e89ee",
+      "source": "working-tree snapshot"
+    },
+    {
+      "path": "utils/visualization.py",
+      "sha256": "5c9c209bbc5774719dd042b12660ca74f737e2a9e74f307b16d027c8cd67e06e",
+      "source": "working-tree snapshot"
+    }
+  ]
+}

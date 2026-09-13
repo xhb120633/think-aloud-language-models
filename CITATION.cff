@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript and the repository version used."
+title: "Rethinking Think-Aloud in the Age of Language Models: Data and Code"
+type: software
+authors:
+  - family-names: Xie
+    given-names: Hanbo
+  - family-names: Xiong
+    given-names: Hua-Dong
+  - family-names: Wilson
+    given-names: Robert C.
+repository-code: "https://github.com/xhb120633/think-aloud-language-models"
+version: 1.0.0
+license: MIT
+date-released: 2026-09-13

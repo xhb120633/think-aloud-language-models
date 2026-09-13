@@ -1,0 +1,185 @@
+{
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "4a83c0dda7f0de48506419e5b1d7efa1820927a947ee7586a52182de13b4e510"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "eafe66cac726dfda33745f6a38258f794c3e45b16f3f8337ac4b1a833ae0b36e"
+    },
+    {
+      "path": "analyze_behavior_replication.py",
+      "sha256": "82a813ea32b5f5d89458f5372ad0e4fa169c7733bbf189cccd7338618e86483b"
+    },
+    {
+      "path": "analyze_control_experiments.py",
+      "sha256": "b0552a2ff0f9f6813d28b15fc86007ae7010d481c6e0b54b8b850954f985d41f"
+    },
+    {
+      "path": "analyze_cot_embeddings_similarity.py",
+      "sha256": "bbef4aec45ddf446b9dca71fb08d09508bab1365cf4bde2147d59dffb5b8f3b3"
+    },
+    {
+      "path": "analyze_in_context.py",
+      "sha256": "96df6bfb8f48041f2ae43709db51ab35dd6b41f89d768311cc5971bb7b7d24c2"
+    },
+    {
+      "path": "analyze_model_comparison.py",
+      "sha256": "d5b1640b77ae079e113748debdb6a0f200b252f95cf8d9b4176ba8e5c8116250"
+    },
+    {
+      "path": "analyze_superficial_claims.py",
+      "sha256": "6437a924440e07d822ad4c6c4ee77fa9a2b080694e127221dea367312ffe7c2e"
+    },
+    {
+      "path": "analyze_transcription_quality.py",
+      "sha256": "e001cd9aa62a73c12a08641937300223b705b02f8fda858fbf524f6dd009d5a4"
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "63c8e04a7efcc5ca1d25de360e657650be48cc8b16c018a2a44be3fd406dbb36"
+    },
+    {
+      "path": "data/behavioral_text_data.csv",
+      "sha256": "9997fbef97a69969034a36c366a58a1e7907c65e44a8a08072b388ccb843b82a"
+    },
+    {
+      "path": "data/behavioral_text_data_expanded.csv",
+      "sha256": "b3ba4fdbaa9625b779a9d3a9c4dc756c2283cbcc86800c5f6b3e73db3bc48e08"
+    },
+    {
+      "path": "data/LICENSE.md",
+      "sha256": "c6a7570d1719f860af6370eb8a979f34380f2a3b022a776d166c13c4be243c49"
+    },
+    {
+      "path": "data/README.md",
+      "sha256": "59cbff00ff870cfa5bd9074cb1db9292fb9fb2fc1ae1a4c24e92680c0b270817"
+    },
+    {
+      "path": "docs/PROVENANCE.md",
+      "sha256": "e2fc172f5f52bbda22b0cedd2a9f02d3536f5d47f69dbb70122906b3b44aad33"
+    },
+    {
+      "path": "docs/REPRODUCING.md",
+      "sha256": "6abcf19d37c7cf8208f86c17ced8f626aa82ec83637c5e717509aa589f7331fd"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "sha256": "8524e7876a066654d6d3562a12a6d4852f28eba04919671c0c03d78826578230"
+    },
+    {
+      "path": "embed_cot_data.py",
+      "sha256": "17cdf2e55c2797814de70d267375559ac9a58e9b4e807037234837211e6d164c"
+    },
+    {
+      "path": "examples/__init__.py",
+      "sha256": "9771169842c633592778139688973ff163dbe737117722e48bb38f1919a8455a"
+    },
+    {
+      "path": "examples/inspect_data.py",
+      "sha256": "32745a2d3b762c0da15999cacaa5d411ca19d7a7886b27d5b6325daa12892ee7"
+    },
+    {
+      "path": "examples/read_data.py",
+      "sha256": "5cbe9256788f06f8234cb399991bd3bf603bd892c47025bb9ef997b7df065811"
+    },
+    {
+      "path": "examples/README.md",
+      "sha256": "6540a8abdda408f5a875c101755d4aac0c6826d0758d257640f6ec864882a816"
+    },
+    {
+      "path": "exp1_cognitive_modeling.py",
+      "sha256": "0e8caa1e6afc84e59420a6e5b9882a2ff14228f35f4e252435e0a14541aa05b1"
+    },
+    {
+      "path": "exp1_llm_prediction.py",
+      "sha256": "fe5b91679e13b5599914708131d3edb4b7c53df3c0c24fc34d3ff635ef1c1126"
+    },
+    {
+      "path": "exp1_neural_training.py",
+      "sha256": "19d5a7e39ed8b4db9c06c0d4eda646bf72b3aac108df4c81a76943da43956134"
+    },
+    {
+      "path": "exp2_in_context.py",
+      "sha256": "95522da517931899e5d933a945c351981d64bea7946715aefbc9622b07886048"
+    },
+    {
+      "path": "exp2_in_context_pt.py",
+      "sha256": "70a1f93b54bea1094e86ce487ea6b0bd566c2babdc748e7596b77a1938eae8c1"
+    },
+    {
+      "path": "exp2_in_context_pt_distributed.py",
+      "sha256": "2820aa6df9b3dbd354a5679bb717f98dee9d6242b3e0794a239943c36b67021a"
+    },
+    {
+      "path": "exp_superficial_claims.py",
+      "sha256": "d8fe37e0087c308defedb1585ea899d8fc05f6d8f868e97f1ce526ef40c59c67"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "90719e59fa8ec5a3b73432433760b99a4fccf6061ba87890ad42ed3a8bca983c"
+    },
+    {
+      "path": "models/cognitive_models.py",
+      "sha256": "74c02abd9be1565e2e46a5ae6ee9d5291230d6a7ca699219d93a8762e24e086b"
+    },
+    {
+      "path": "models/llm_model.py",
+      "sha256": "88b03066a90b45f5135a6e36dec25a253d207867b3cc3f22bf12f8b8f59fd394"
+    },
+    {
+      "path": "models/neural_model.py",
+      "sha256": "4eb47e0e05d07bc62f4931c801e18d19637493da598a1055df6f9e12ac2e2f47"
+    },
+    {
+      "path": "README.md",
+      "sha256": "31aa54f9c054b0862b13c314b6d499899dc3893f395c1d91b9bb081353bea4a7"
+    },
+    {
+      "path": "requirements-models.txt",
+      "sha256": "1e82229ae5147b995d77ffab4edf8f31921140980bb08151a442a45133b1fffe"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "fd1a01f4f8598b5ffb7fbffebc0316cdfee87e2751ba07dc51e44e7a57efc2cc"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "3e078fa298ffc18aa0c80059f96594e9c68072f917c2d135d660e312cc2a483a"
+    },
+    {
+      "path": "utils/config.py",
+      "sha256": "1608a2740a8b4e0dfca124e887713a9504323dccd2f64c2d89101fc5bb5c0101"
+    },
+    {
+      "path": "utils/data_processing.py",
+      "sha256": "ca5e77a25f32fac44a6c8763ea6724170459c9f959e0ff82c2304835ca93abc3"
+    },
+    {
+      "path": "utils/metrics.py",
+      "sha256": "4736b3c98067d18a387240cedfe3cd2bfbbcd4d078342680d5d6efd4520974e9"
+    },
+    {
+      "path": "utils/neural_data_loader.py",
+      "sha256": "5070d29a14beebdd25cfa05f5ca5ce90aa192cc306cd1324a9a7c9ec1be19473"
+    },
+    {
+      "path": "utils/prompt_templates.py",
+      "sha256": "1dc64de121de971f8bd44c03986aa0b75dba70bedf4654422644c493fb39230a"
+    },
+    {
+      "path": "utils/prompt_utils.py",
+      "sha256": "fbb780244842cadf0c3418dd803cea90544178bebc3484618792c23063801a53"
+    },
+    {
+      "path": "utils/superficial_action_extraction.py",
+      "sha256": "6a79ee1a27d4c94c8979d47604e19a467146e08143c706693b62ee2d3c0e89ee"
+    },
+    {
+      "path": "utils/visualization.py",
+      "sha256": "5c9c209bbc5774719dd042b12660ca74f737e2a9e74f307b16d027c8cd67e06e"
+    }
+  ]
+}

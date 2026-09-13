@@ -1,0 +1,5 @@
+-r requirements.txt
+torch
+transformers
+openai
+# Optional local high-throughput backend: install vllm separately on compatible hardware.
