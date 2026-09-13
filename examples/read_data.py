@@ -23,6 +23,6 @@ def load_trials(experiment="small"):
             record["choice"] = int(float(record["choice"]))
             for name in ("p1", "v1", "p2", "v2"):
                 record[name] = ast.literal_eval(record[name])
-            # Preserve response-time and stored word-count strings; no assumed units.
+            # Preserve exported strings; rt is stimulus-to-choice time in milliseconds.
             records.append(record)
     return records

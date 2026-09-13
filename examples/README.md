@@ -14,4 +14,4 @@ print(df.groupby("sub_id")["choice"].mean())  # proportion choosing B
 print(df.loc[0, "p1"])                       # already a Python list
 ```
 
-The loader preserves all rows, including blank transcripts. Choose exclusions for your analysis explicitly. It keeps source participant IDs as strings and does not combine IDs across experiments. `rt` and `word_count` retain their exported strings; cast explicitly if needed. No recording files are required.
+The loader preserves all rows, including blank transcripts. Choose exclusions for your analysis explicitly. It keeps source participant IDs as strings and does not combine IDs across experiments. `rt` and `word_count` retain their exported strings; cast explicitly if needed. `rt` is in milliseconds and runs from stimulus onset to choice, including think-aloud verbalization; it is not conventional reaction time measured without think-aloud. See the [data dictionary](../data/README.md). No recording files are required.

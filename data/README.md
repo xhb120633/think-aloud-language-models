@@ -12,11 +12,13 @@ Each row is one risky-choice trial. The files are UTF-8 CSVs with a header row, 
 | `5` | `p2` | List of probabilities for option B, expressed as percentages |
 | `6` | `v2` | List of corresponding outcomes for option B, in the task's monetary units |
 | `7` | `problem_id` | Identifier for the decision problem |
-| `8` | `rt` | Response-time value as exported; the source loader does not establish the unit |
+| `8` | `rt` | Elapsed time in milliseconds (ms), measured from stimulus onset to the participant's choice, including concurrent think-aloud verbalization |
 | `9` | `think_aloud` | Concurrent think-aloud transcript; blank text is retained |
 | `10` | `word_count` | Stored transcript word count, not recomputed during release |
 
-`p1[i]` and `v1[i]` form one outcome of option A; the same applies to option B. Parse these list-valued strings with `ast.literal_eval`, not `eval`. Do not divide monetary amounts or response times by an assumed conversion factor. Transcription wording and stored measurements are retained as supplied.
+`p1[i]` and `v1[i]` form one outcome of option A; the same applies to option B. Parse these list-valued strings with `ast.literal_eval`, not `eval`. Transcription wording and stored measurements are retained as supplied.
+
+**Interpreting `rt`:** timing starts when the stimulus appears and ends when the participant makes a choice. This interval includes viewing the stimulus, thinking aloud, and selecting an option. It is therefore a stimulus-to-choice duration under concurrent verbalization, rather than a conventional reaction-time measure from a task without think-aloud. It is not speech duration alone and does not start at speech onset. Values are in milliseconds; divide by 1,000 to express them in seconds.
 
 ## Files and counts
 

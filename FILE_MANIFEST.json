@@ -10,6 +10,22 @@
       "sha256": "eafe66cac726dfda33745f6a38258f794c3e45b16f3f8337ac4b1a833ae0b36e"
     },
     {
+      "path": "CITATION.cff",
+      "sha256": "b65a68b37737f6a1818a5e6185038809e3fcb023f2df9f682e947c595920cc43"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "90719e59fa8ec5a3b73432433760b99a4fccf6061ba87890ad42ed3a8bca983c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "31aa54f9c054b0862b13c314b6d499899dc3893f395c1d91b9bb081353bea4a7"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "3e078fa298ffc18aa0c80059f96594e9c68072f917c2d135d660e312cc2a483a"
+    },
+    {
       "path": "analyze_behavior_replication.py",
       "sha256": "82a813ea32b5f5d89458f5372ad0e4fa169c7733bbf189cccd7338618e86483b"
     },
@@ -38,8 +54,12 @@
       "sha256": "e001cd9aa62a73c12a08641937300223b705b02f8fda858fbf524f6dd009d5a4"
     },
     {
-      "path": "CITATION.cff",
-      "sha256": "63c8e04a7efcc5ca1d25de360e657650be48cc8b16c018a2a44be3fd406dbb36"
+      "path": "data/LICENSE.md",
+      "sha256": "c6a7570d1719f860af6370eb8a979f34380f2a3b022a776d166c13c4be243c49"
+    },
+    {
+      "path": "data/README.md",
+      "sha256": "feb4f927bbe79e23b954734e2d41c160f4c991d9a3e9db1f3ecede3ccf0ca73b"
     },
     {
       "path": "data/behavioral_text_data.csv",
@@ -50,16 +70,8 @@
       "sha256": "b3ba4fdbaa9625b779a9d3a9c4dc756c2283cbcc86800c5f6b3e73db3bc48e08"
     },
     {
-      "path": "data/LICENSE.md",
-      "sha256": "c6a7570d1719f860af6370eb8a979f34380f2a3b022a776d166c13c4be243c49"
-    },
-    {
-      "path": "data/README.md",
-      "sha256": "59cbff00ff870cfa5bd9074cb1db9292fb9fb2fc1ae1a4c24e92680c0b270817"
-    },
-    {
       "path": "docs/PROVENANCE.md",
-      "sha256": "e2fc172f5f52bbda22b0cedd2a9f02d3536f5d47f69dbb70122906b3b44aad33"
+      "sha256": "3a564f59c814e54f042906c97878ed55fa3c4be6e1757a935879dd74d9c13893"
     },
     {
       "path": "docs/REPRODUCING.md",
@@ -74,6 +86,10 @@
       "sha256": "17cdf2e55c2797814de70d267375559ac9a58e9b4e807037234837211e6d164c"
     },
     {
+      "path": "examples/README.md",
+      "sha256": "9e0910e828a5c55ad2e23d16df56cbb5f15619d1d758ac2b4473980141f766ec"
+    },
+    {
       "path": "examples/__init__.py",
       "sha256": "9771169842c633592778139688973ff163dbe737117722e48bb38f1919a8455a"
     },
@@ -83,11 +99,7 @@
     },
     {
       "path": "examples/read_data.py",
-      "sha256": "5cbe9256788f06f8234cb399991bd3bf603bd892c47025bb9ef997b7df065811"
-    },
-    {
-      "path": "examples/README.md",
-      "sha256": "6540a8abdda408f5a875c101755d4aac0c6826d0758d257640f6ec864882a816"
+      "sha256": "6e9dd40f414135a4706d319daf128eef13a32bbf6635ad14838c73ffa1eed3cf"
     },
     {
       "path": "exp1_cognitive_modeling.py",
@@ -118,10 +130,6 @@
       "sha256": "d8fe37e0087c308defedb1585ea899d8fc05f6d8f868e97f1ce526ef40c59c67"
     },
     {
-      "path": "LICENSE",
-      "sha256": "90719e59fa8ec5a3b73432433760b99a4fccf6061ba87890ad42ed3a8bca983c"
-    },
-    {
       "path": "models/cognitive_models.py",
       "sha256": "74c02abd9be1565e2e46a5ae6ee9d5291230d6a7ca699219d93a8762e24e086b"
     },
@@ -134,20 +142,12 @@
       "sha256": "4eb47e0e05d07bc62f4931c801e18d19637493da598a1055df6f9e12ac2e2f47"
     },
     {
-      "path": "README.md",
-      "sha256": "31aa54f9c054b0862b13c314b6d499899dc3893f395c1d91b9bb081353bea4a7"
-    },
-    {
       "path": "requirements-models.txt",
       "sha256": "1e82229ae5147b995d77ffab4edf8f31921140980bb08151a442a45133b1fffe"
     },
     {
       "path": "requirements.txt",
       "sha256": "fd1a01f4f8598b5ffb7fbffebc0316cdfee87e2751ba07dc51e44e7a57efc2cc"
-    },
-    {
-      "path": "SOURCE_MANIFEST.json",
-      "sha256": "3e078fa298ffc18aa0c80059f96594e9c68072f917c2d135d660e312cc2a483a"
     },
     {
       "path": "utils/config.py",
